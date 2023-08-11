@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class Onboarding1: UIView {
+class Onboarding1: UIView {
     
     // MARK: - Properties
     private let mainLabel = UILabel().then {
@@ -56,7 +56,7 @@ final class Onboarding1: UIView {
     
     private func setLayout() {
         mainLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).offset(57)
+            $0.top.equalToSuperview().inset(110)
             $0.leading.equalToSuperview().inset(27)
         }
         
