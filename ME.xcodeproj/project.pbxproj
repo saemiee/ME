@@ -22,6 +22,10 @@
 		8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5502A822CE000EDCE22 /* Onboarding3.swift */; };
 		8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5522A822CEE00EDCE22 /* Onboarding4.swift */; };
 		8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */; };
+		8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */; };
+		8447E5DF2A84F24F00EDCE22 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5DE2A84F24F00EDCE22 /* ExerciseTableViewCell.swift */; };
+		8457A80C2A872E540009150D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A80B2A872E540009150D /* Exercise.swift */; };
+		8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +43,11 @@
 		8447E54E2A822A4100EDCE22 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		8447E5502A822CE000EDCE22 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		8447E5522A822CEE00EDCE22 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
-		8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		8447E5DE2A84F24F00EDCE22 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		8457A80B2A872E540009150D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			children = (
 				8447E5412A82150E00EDCE22 /* Extension */,
 				8447E53E2A82112F00EDCE22 /* Resources */,
+				8457A80A2A872E130009150D /* Model */,
 				8447E5442A821BC500EDCE22 /* View */,
 				8447E5A72A826E1200EDCE22 /* Controller */,
 				8447E52C2A820A1F00EDCE22 /* Assets.xcassets */,
@@ -107,10 +116,8 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8447E5472A821C3D00EDCE22 /* Onboarding1.swift */,
-				8447E54E2A822A4100EDCE22 /* Onboarding2.swift */,
-				8447E5502A822CE000EDCE22 /* Onboarding3.swift */,
-				8447E5522A822CEE00EDCE22 /* Onboarding4.swift */,
+				8447E5DD2A84F22600EDCE22 /* Onboarding */,
+				8447E5DE2A84F24F00EDCE22 /* ExerciseTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,8 +127,29 @@
 			children = (
 				8447E5242A820A1E00EDCE22 /* ViewController.swift */,
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
+				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8447E5DD2A84F22600EDCE22 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8447E5472A821C3D00EDCE22 /* Onboarding1.swift */,
+				8447E54E2A822A4100EDCE22 /* Onboarding2.swift */,
+				8447E5502A822CE000EDCE22 /* Onboarding3.swift */,
+				8447E5522A822CEE00EDCE22 /* Onboarding4.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8457A80A2A872E130009150D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8457A80B2A872E540009150D /* Exercise.swift */,
+				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,14 +232,18 @@
 			files = (
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
+				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
+				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
+				8447E5DF2A84F24F00EDCE22 /* ExerciseTableViewCell.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
+				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
