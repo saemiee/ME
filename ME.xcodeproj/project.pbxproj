@@ -26,6 +26,7 @@
 		8457A80C2A872E540009150D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A80B2A872E540009150D /* Exercise.swift */; };
 		8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */; };
 		8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */; };
+		8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8442A8A31BA0009150D /* TagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8457A80B2A872E540009150D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataManager.swift; sourceTree = "<group>"; };
 		8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
+		8457A8442A8A31BA0009150D /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				8447E5242A820A1E00EDCE22 /* ViewController.swift */,
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
 				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
+				8457A8442A8A31BA0009150D /* TagViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
+				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
 			);
