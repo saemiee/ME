@@ -34,6 +34,7 @@ class Onboarding1: UIView {
         $0.image = UIImage(named: "appleWatch")
     }
 
+    // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -44,16 +45,19 @@ class Onboarding1: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setting
     private func setup() {
         backgroundColor = .background
         addView()
         setLayout()
     }
     
+    // MARK: - Add View
     private func addView() {
         [mainLabel, explanationLabel, appleWatchImage].forEach { addSubview($0) }
     }
     
+    // MARK: - Layout
     private func setLayout() {
         mainLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(110)
