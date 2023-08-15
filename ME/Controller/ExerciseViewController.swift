@@ -113,8 +113,8 @@ extension ExerciseViewController: UICollectionViewDataSource {
         
         cell.exerciseImage.image = exerciseList[indexPath.row].exerciseImage
         cell.exerciseLabel.text = exerciseList[indexPath.row].exercise
-        cell.kcalLabel.text = String(exerciseList[indexPath.row].kcal)
-        cell.pointLabel.text = String(exerciseList[indexPath.row].point)
+        cell.kcalLabel.text = "\(exerciseList[indexPath.row].kcal) Kcal /"
+        cell.pointLabel.text = " \(exerciseList[indexPath.row].point) Point"
         cell.descriptionLabel.text = exerciseList[indexPath.row].description
         
         return cell

@@ -16,6 +16,7 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
     let exerciseImage = UIImageView().then {
         $0.tintColor = .yellow
+
     }
     
     let exerciseLabel = UILabel().then {
@@ -39,15 +40,14 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         $0.spacing = 0
         $0.axis = .horizontal
         $0.distribution = .fill
-        $0.alignment = .fill
+        $0.alignment = .leading
     }
     
     lazy var stackView = UIStackView().then {
-        $0.spacing = 5
+        $0.spacing = 1
         $0.axis = .vertical
         $0.distribution = .fill
-        $0.alignment = .fill
-        $0.backgroundColor = .systemPink
+        $0.alignment = .leading
     }
     
     let divisionView = UIView().then {
@@ -93,7 +93,7 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     func setLayout() {
         exerciseImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(16)
+            $0.leading.equalToSuperview().inset(12)
             $0.centerY.equalToSuperview()
         }
         
@@ -104,20 +104,20 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         stackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.height.equalTo(40)
-            $0.leading.equalToSuperview().inset(64)
+            $0.leading.equalToSuperview().inset(52)
         }
         
         divisionView.snp.makeConstraints {
             $0.height.equalTo(40)
             $0.width.equalTo(1)
-            $0.centerX.centerY.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().inset(186)
         }
         
         descriptionLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalTo(divisionView.snp.trailing).offset(14)
+            $0.leading.equalTo(divisionView.snp.trailing).offset(10)
         }
-        
     }
     
 }
