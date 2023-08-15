@@ -27,6 +27,8 @@
 		8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */; };
 		8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */; };
 		8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8442A8A31BA0009150D /* TagViewController.swift */; };
+		8457A8492A8B72C30009150D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8482A8B72C30009150D /* MyViewController.swift */; };
+		8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84A2A8B73240009150D /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataManager.swift; sourceTree = "<group>"; };
 		8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
 		8457A8442A8A31BA0009150D /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		8457A8482A8B72C30009150D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		8457A84A2A8B73240009150D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
 				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
 				8457A8442A8A31BA0009150D /* TagViewController.swift */,
+				8457A8482A8B72C30009150D /* MyViewController.swift */,
+				8457A84A2A8B73240009150D /* ShopViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,11 +241,13 @@
 			files = (
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
+				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
+				8457A8492A8B72C30009150D /* MyViewController.swift in Sources */,
 				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
