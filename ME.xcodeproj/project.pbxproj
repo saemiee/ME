@@ -30,6 +30,7 @@
 		8457A8492A8B72C30009150D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8482A8B72C30009150D /* MyViewController.swift */; };
 		8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84A2A8B73240009150D /* ShopViewController.swift */; };
 		8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84C2A8B73D90009150D /* AccessGuideView.swift */; };
+		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		8457A8482A8B72C30009150D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		8457A84A2A8B73240009150D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		8457A84C2A8B73D90009150D /* AccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessGuideView.swift; sourceTree = "<group>"; };
+		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8457A8532A8E13BD0009150D /* MyView */,
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
 				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
@@ -162,6 +165,14 @@
 				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8457A8532A8E13BD0009150D /* MyView */ = {
+			isa = PBXGroup;
+			children = (
+				8457A8542A8E13DC0009150D /* MyView.swift */,
+			);
+			path = MyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
+				8457A8552A8E13DC0009150D /* MyView.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,

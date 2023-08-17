@@ -38,15 +38,15 @@ class Onboarding1: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup()
+        configureUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Setting
-    private func setup() {
+    // MARK: - UI Setting
+    private func configureUI() {
         backgroundColor = .background
         addView()
         setLayout()
