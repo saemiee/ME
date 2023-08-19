@@ -29,11 +29,11 @@ final class OnboardingViewController: UIViewController {
     
     private lazy var scrollView = UIScrollView(frame: view.bounds).then {
         $0.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(onboardingView.count), height: UIScreen.main.bounds.height)
-        $0.alwaysBounceVertical = false
         $0.showsHorizontalScrollIndicator = false
         $0.showsVerticalScrollIndicator = false
         $0.isScrollEnabled = true
         $0.isPagingEnabled = true
+        $0.isDirectionalLockEnabled = true
         $0.bounces = false
     }
     
@@ -55,7 +55,7 @@ final class OnboardingViewController: UIViewController {
     // MARK: - Layout
     private func setLayout() {
         scrollView.snp.makeConstraints {
-            $0.top.bottom.left.trailing.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         
         pageControl.snp.makeConstraints {

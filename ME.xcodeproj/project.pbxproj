@@ -31,6 +31,7 @@
 		8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84A2A8B73240009150D /* ShopViewController.swift */; };
 		8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84C2A8B73D90009150D /* AccessGuideView.swift */; };
 		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
+		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		8457A84A2A8B73240009150D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		8457A84C2A8B73D90009150D /* AccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessGuideView.swift; sourceTree = "<group>"; };
 		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				8457A8542A8E13DC0009150D /* MyView.swift */,
+				847B23022A909AAE000B79AB /* ExerciseCard.swift */,
 			);
 			path = MyView;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
+				847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
 				8457A8492A8B72C30009150D /* MyViewController.swift in Sources */,
