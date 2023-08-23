@@ -14,33 +14,29 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     static let identifier = "ExerciseCell"
     
     // MARK: - Properties
+    let circle = UIView().then {
+        $0.backgroundColor = .
+    }
+    
     let exerciseImage = UIImageView().then {
         $0.tintColor = .yellow
-
     }
     
     let exerciseLabel = UILabel().then {
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
     
     let kcalLabel = UILabel().then {
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         $0.textAlignment = .left
     }
     
     let pointLabel = UILabel().then {
-        $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        $0.textColor = .lightOrange
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         $0.textAlignment = .left
-    }
-    
-    lazy var kcalAndPointStackView = UIStackView().then {
-        $0.spacing = 0
-        $0.axis = .horizontal
-        $0.distribution = .fill
-        $0.alignment = .leading
     }
     
     lazy var stackView = UIStackView().then {
@@ -49,17 +45,6 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         $0.distribution = .fill
         $0.alignment = .leading
     }
-    
-    let divisionView = UIView().then {
-        $0.backgroundColor = .white
-    }
-    
-    let descriptionLabel = UILabel().then {
-        $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 9, weight: .regular)
-        $0.numberOfLines = 0
-    }
-    
     
     // MARK: - init
     override init(frame: CGRect) {
@@ -85,9 +70,8 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Add View
     func addView() {
-        [kcalLabel, pointLabel].forEach { self.kcalAndPointStackView.addArrangedSubview($0) }
-        [exerciseLabel, kcalAndPointStackView].forEach { self.stackView.addArrangedSubview($0) }
-        [exerciseImage, stackView, divisionView, descriptionLabel].forEach { self.contentView.addSubview($0) }
+        [exerciseLabel, kcalLabel].forEach { self.stackView.addArrangedSubview($0) }
+        [exerciseImage, stackView, pointLabel].forEach { self.contentView.addSubview($0) }
     }
     
     // MARK: - Layout
@@ -107,16 +91,9 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
             $0.leading.equalToSuperview().inset(52)
         }
         
-        divisionView.snp.makeConstraints {
-            $0.height.equalTo(40)
-            $0.width.equalTo(1)
+        pointLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(186)
-        }
-        
-        descriptionLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.leading.equalTo(divisionView.snp.trailing).offset(10)
+            $0.trailing.equalToSuperview().inset(30)
         }
     }
     

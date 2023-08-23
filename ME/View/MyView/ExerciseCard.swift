@@ -12,21 +12,26 @@ import Then
 class ExerciseCard: UIView {
     
     // MARK: - Properties
-    private let exerciseImage = UIImageView()
+    private let exerciseImage = UIImageView().then {
+        $0.image = UIImage.init( systemName: "figure.walk", withConfiguration: UIImage.SymbolConfiguration(pointSize: 22))
+    }
     
     private let exerciseLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.text = "걷기"
     }
     
     private let kcalLabel = UILabel().then {
         $0.textColor = .yellow
         $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        $0.text = "100 Kcal / "
     }
     
     private let pointLabel = UILabel().then {
         $0.textColor = .yellow
         $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        $0.text = "10 Point"
     }
     
     lazy var stackView = UIStackView().then {

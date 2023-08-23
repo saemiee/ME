@@ -12,5 +12,4 @@ struct Exercise {
     let exercise: String
     let kcal: Int
     let point: Int
-    let description: String
 }

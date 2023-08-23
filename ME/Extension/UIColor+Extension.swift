@@ -13,6 +13,6 @@ extension UIColor {
     @nonobjc class var gray: UIColor { return UIColor(named: "gray")! }
     @nonobjc class var yellow: UIColor { return UIColor(named: "yellow")! }
     @nonobjc class var lightOrange: UIColor { return UIColor(named: "lightOrange")! }
-    
+    @nonobjc class var darkGray: UIColor { return UIColor(named: "darkGray")! }
 }
 
