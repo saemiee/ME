@@ -15,7 +15,7 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     let circle = UIView().then {
-        $0.backgroundColor = .
+        $0.backgroundColor = .darkGray
     }
     
     let exerciseImage = UIImageView().then {
@@ -57,6 +57,13 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        circle.layer.cornerRadius = circle.frame.width / 2
+        circle.layer.cornerRadius = circle.frame.height / 2
+    }
+    
     // MARK: - Setting
     private func setup() {
         backgroundColor = .gray
@@ -71,14 +78,19 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     // MARK: - Add View
     func addView() {
         [exerciseLabel, kcalLabel].forEach { self.stackView.addArrangedSubview($0) }
-        [exerciseImage, stackView, pointLabel].forEach { self.contentView.addSubview($0) }
+        [circle, exerciseImage, stackView, pointLabel].forEach { self.contentView.addSubview($0) }
     }
     
     // MARK: - Layout
     func setLayout() {
-        exerciseImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(12)
+        circle.snp.makeConstraints {
+            $0.width.height.equalTo(48)
             $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().inset(12)
+        }
+        
+        exerciseImage.snp.makeConstraints {
+            $0.centerX.centerY.equalTo(circle.snp.center)
         }
         
         exerciseLabel.snp.makeConstraints {
@@ -88,7 +100,7 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         stackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.height.equalTo(40)
-            $0.leading.equalToSuperview().inset(52)
+            $0.leading.equalTo(circle.snp.trailing).offset(10)
         }
         
         pointLabel.snp.makeConstraints {
