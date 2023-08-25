@@ -57,13 +57,6 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        circle.layer.cornerRadius = circle.frame.width / 2
-        circle.layer.cornerRadius = circle.frame.height / 2
-    }
-    
     // MARK: - Setting
     private func setup() {
         backgroundColor = .gray
@@ -82,6 +75,13 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Layout
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        circle.layer.cornerRadius = circle.frame.width / 2
+        circle.layer.cornerRadius = circle.frame.height / 2
+    }
+    
     func setLayout() {
         circle.snp.makeConstraints {
             $0.width.height.equalTo(48)

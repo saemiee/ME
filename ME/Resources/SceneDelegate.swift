@@ -16,11 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windonScene)
         
-        let rootVC = ExerciseViewController()
+        let rootVC = TabBarViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         
         self.window?.rootViewController = navVC
         window?.makeKeyAndVisible()
+        window?.backgroundColor = .background
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

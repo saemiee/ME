@@ -44,6 +44,18 @@ final class MyViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
+    lazy var exerciseCardView = UIView().then {
+        $0.backgroundColor = .clear
+    }
+    
+    private let exerciseCard1 = ExerciseCard()
+    private let exerciseCard2 = ExerciseCard()
+    private let exerciseCard3 = ExerciseCard()
+    private let exerciseCard4 = ExerciseCard()
+    
+    private let tagView = MainTagView()
+    
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +67,8 @@ final class MyViewController: UIViewController {
     
     // MARK: - Add View
     private func addView() {
-        [myLabel, myView, exercisesLabel, exercisesMore, tagMore].forEach { view.addSubview($0) }
+        [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
+        [myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
     // MARK: - Layout
@@ -83,7 +96,57 @@ final class MyViewController: UIViewController {
             $0.trailing.equalToSuperview().inset(30)
         }
         
+        exerciseCard1.snp.makeConstraints {
+            $0.width.equalTo(160)
+            $0.height.equalTo(67)
+            $0.leading.equalTo(exerciseCardView.snp.leading)
+            $0.top.equalTo(exerciseCardView.snp.top)
+        }
         
+        exerciseCard2.snp.makeConstraints {
+            $0.width.equalTo(160)
+            $0.height.equalTo(67)
+            $0.trailing.equalTo(exerciseCardView.snp.trailing)
+            $0.top.equalTo(exerciseCardView.snp.top)
+        }
+        
+        exerciseCard3.snp.makeConstraints {
+            $0.width.equalTo(160)
+            $0.height.equalTo(67)
+            $0.leading.equalTo(exerciseCardView.snp.leading)
+            $0.bottom.equalTo(exerciseCardView.snp.bottom)
+        }
+        
+        exerciseCard4.snp.makeConstraints {
+            $0.width.equalTo(160)
+            $0.height.equalTo(67)
+            $0.trailing.equalTo(exerciseCardView.snp.trailing)
+            $0.bottom.equalTo(exerciseCardView.snp.bottom)
+        }
+        
+        exerciseCardView.snp.makeConstraints {
+            $0.top.equalTo(exercisesLabel.snp.bottom).offset(9)
+            $0.bottom.equalToSuperview().inset(276)
+            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().inset(30)
+        }
+        
+        tagLabel.snp.makeConstraints {
+            $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
+            $0.leading.equalToSuperview().inset(30)
+        }
+        
+        tagMore.snp.makeConstraints {
+            $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
+            $0.trailing.equalToSuperview().inset(30)
+        }
+        
+        tagView.snp.makeConstraints {
+            $0.top.equalTo(tagLabel.snp.bottom).offset(9)
+            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().inset(30)
+            $0.height.equalTo(107)
+        }
     }
 
 }

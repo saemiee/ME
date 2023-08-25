@@ -32,6 +32,8 @@
 		8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84C2A8B73D90009150D /* AccessGuideView.swift */; };
 		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
+		847B23052A962D6C000B79AB /* MainTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* MainTagView.swift */; };
+		847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23062A98CE07000B79AB /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		8457A84C2A8B73D90009150D /* AccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessGuideView.swift; sourceTree = "<group>"; };
 		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
+		847B23042A962D6C000B79AB /* MainTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTagView.swift; sourceTree = "<group>"; };
+		847B23062A98CE07000B79AB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				8457A8442A8A31BA0009150D /* TagViewController.swift */,
 				8457A8482A8B72C30009150D /* MyViewController.swift */,
 				8457A84A2A8B73240009150D /* ShopViewController.swift */,
+				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				8457A8542A8E13DC0009150D /* MyView.swift */,
 				847B23022A909AAE000B79AB /* ExerciseCard.swift */,
+				847B23042A962D6C000B79AB /* MainTagView.swift */,
 			);
 			path = MyView;
 			sourceTree = "<group>";
@@ -271,9 +277,11 @@
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
 				8457A8552A8E13DC0009150D /* MyView.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
+				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
+				847B23052A962D6C000B79AB /* MainTagView.swift in Sources */,
 				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
