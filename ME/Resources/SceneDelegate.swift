@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootVC = TabBarViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         
+        navVC.navigationBar.isHidden = true
+        
         self.window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         window?.backgroundColor = .background
