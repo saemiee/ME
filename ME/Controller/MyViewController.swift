@@ -30,6 +30,7 @@ final class MyViewController: UIViewController {
         $0.text = "더보기"
         $0.textColor = .lightOrange
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.isUserInteractionEnabled = true
     }
     
     private let tagLabel = UILabel().then {
@@ -42,6 +43,7 @@ final class MyViewController: UIViewController {
         $0.text = "더보기"
         $0.textColor = .lightOrange
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.isUserInteractionEnabled = true
     }
     
     lazy var exerciseCardView = UIView().then {
@@ -63,6 +65,7 @@ final class MyViewController: UIViewController {
         view.backgroundColor = .background
         addView()
         setLayout()
+        setupTapGestures()
     }
     
     // MARK: - Add View
@@ -148,5 +151,26 @@ final class MyViewController: UIViewController {
             $0.height.equalTo(107)
         }
     }
-
+    
+    // MARK: - Tab Gestures
+    private func setupTapGestures() {
+        let exerciseGesture = UITapGestureRecognizer(target: self, action: #selector(exerciseMoreTapped(_:)))
+        exercisesMore.addGestureRecognizer(exerciseGesture)
+        
+        let tagGesture = UITapGestureRecognizer(target: self, action: #selector(tagMoreTapped(_:)))
+        tagMore.addGestureRecognizer(tagGesture)
+    }
+    
+    @objc func exerciseMoreTapped(_ sender: UITapGestureRecognizer) {
+        let exerciseVC = ExerciseViewController()
+        navigationController?.pushViewController(exerciseVC, animated: true)
+    }
+    
+    @objc func tagMoreTapped(_ sender: UITapGestureRecognizer) {
+        let tagVC = TagViewController()
+        navigationController?.pushViewController(tagVC, animated: true)
+    }
 }
+
+
+
