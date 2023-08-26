@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A5B622A99E9480016BD0B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B612A99E9480016BD0B /* SettingViewController.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840A5B612A99E9480016BD0B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				8457A8482A8B72C30009150D /* MyViewController.swift */,
 				8457A84A2A8B73240009150D /* ShopViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
+				840A5B612A99E9480016BD0B /* SettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
 				8457A8492A8B72C30009150D /* MyViewController.swift in Sources */,
 				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
+				840A5B622A99E9480016BD0B /* SettingViewController.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
 				8457A8552A8E13DC0009150D /* MyView.swift in Sources */,

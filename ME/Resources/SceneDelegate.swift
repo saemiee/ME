@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navVC = UINavigationController(rootViewController: rootVC)
         
         navVC.navigationBar.isHidden = true
+        navVC.navigationBar.tintColor = .yellow
         
         self.window?.rootViewController = navVC
         window?.makeKeyAndVisible()

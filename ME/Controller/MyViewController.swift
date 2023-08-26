@@ -12,6 +12,12 @@ import Then
 final class MyViewController: UIViewController {
     
     // MARK: - Properties
+    private let setting = UIImageView().then {
+        $0.image = UIImage(systemName: "person.crop.circle")
+        $0.tintColor = .yellow
+        $0.isUserInteractionEnabled = true
+    }
+    
     private let myLabel = UILabel().then {
         $0.text = "MY"
         $0.textColor = .white
@@ -71,11 +77,17 @@ final class MyViewController: UIViewController {
     // MARK: - Add View
     private func addView() {
         [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
-        [myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
+        [setting, myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
     // MARK: - Layout
     private func setLayout() {
+        setting.snp.makeConstraints {
+            $0.width.height.equalTo(34)
+            $0.trailing.equalToSuperview().inset(30)
+            $0.top.equalToSuperview().inset(130)
+        }
+        
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
             $0.leading.equalToSuperview().inset(30)
@@ -159,6 +171,9 @@ final class MyViewController: UIViewController {
         
         let tagGesture = UITapGestureRecognizer(target: self, action: #selector(tagMoreTapped(_:)))
         tagMore.addGestureRecognizer(tagGesture)
+        
+        let setGesture = UITapGestureRecognizer(target: self, action: #selector(settingTapped(_:)))
+        setting.addGestureRecognizer(setGesture)
     }
     
     @objc func exerciseMoreTapped(_ sender: UITapGestureRecognizer) {
@@ -169,6 +184,12 @@ final class MyViewController: UIViewController {
     @objc func tagMoreTapped(_ sender: UITapGestureRecognizer) {
         let tagVC = TagViewController()
         navigationController?.pushViewController(tagVC, animated: true)
+    }
+    
+    @objc func settingTapped(_ sender: UITapGestureRecognizer) {
+        let setVC = SettingViewController()
+        setVC.modalPresentationStyle = .automatic
+        present(setVC, animated: true)
     }
 }
 
