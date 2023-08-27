@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		840A5B622A99E9480016BD0B /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B612A99E9480016BD0B /* MyViewController.swift */; };
-		840A5B642A9A56500016BD0B /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B632A9A56500016BD0B /* SettingTableViewCell.swift */; };
+		840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */; };
+		840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6A2A9B4EDA0016BD0B /* Shop.swift */; };
+		840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -40,7 +42,10 @@
 
 /* Begin PBXFileReference section */
 		840A5B612A99E9480016BD0B /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
-		840A5B632A9A56500016BD0B /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		840A5B672A9B43FB0016BD0B /* ME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ME.entitlements; sourceTree = "<group>"; };
+		840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
+		840A5B6A2A9B4EDA0016BD0B /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDataManager.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		8447E51F2A820A1E00EDCE22 /* ME */ = {
 			isa = PBXGroup;
 			children = (
+				840A5B672A9B43FB0016BD0B /* ME.entitlements */,
 				8447E5412A82150E00EDCE22 /* Extension */,
 				8447E53E2A82112F00EDCE22 /* Resources */,
 				8457A80A2A872E130009150D /* Model */,
@@ -136,11 +142,11 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */,
 				8457A8532A8E13BD0009150D /* HomeView */,
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
 				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
-				840A5B632A9A56500016BD0B /* SettingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +182,8 @@
 			children = (
 				8457A80B2A872E540009150D /* Exercise.swift */,
 				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
+				840A5B6A2A9B4EDA0016BD0B /* Shop.swift */,
+				840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,8 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
-				840A5B642A9A56500016BD0B /* SettingTableViewCell.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
+				840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */,
+				840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */,
 				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
@@ -289,6 +298,7 @@
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
+				840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */,
 				847B23052A962D6C000B79AB /* MainTagView.swift in Sources */,
 				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
@@ -429,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ME/ME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -455,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ME/ME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
