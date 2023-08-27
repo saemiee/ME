@@ -12,23 +12,23 @@ final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myVC = MyViewController()
+        let homeVC = HomeViewController()
         let shopVC = ShopViewController()
         
         
-        myVC.title = "Home"
+        homeVC.title = "Home"
         shopVC.title = "Shop"
         
-        myVC.tabBarItem.image = UIImage.init(systemName: "house")
+        homeVC.tabBarItem.image = UIImage.init(systemName: "house")
         shopVC.tabBarItem.image = UIImage.init(systemName: "bag")
         
-        let navigationMy = UINavigationController(rootViewController: myVC)
+        let navigationHome = UINavigationController(rootViewController: homeVC)
         let navigationShop = UINavigationController(rootViewController: shopVC)
         
-        navigationMy.navigationBar.prefersLargeTitles = true
+        navigationHome.navigationBar.prefersLargeTitles = true
         navigationShop.navigationBar.prefersLargeTitles = true
         
-        setViewControllers([navigationMy, navigationShop], animated: false)
+        setViewControllers([navigationHome, navigationShop], animated: false)
     }
     
     override func viewDidLayoutSubviews() {
