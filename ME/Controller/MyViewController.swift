@@ -163,6 +163,7 @@ final class MyViewController: UIViewController {
     
     @objc func checkButtonTapped() {
         dismiss(animated: true)
+        print("buttonTapped")
     }
     
 }
