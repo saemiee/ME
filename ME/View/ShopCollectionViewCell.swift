@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
     
@@ -14,7 +16,10 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
     let productImage = UIImageView()
     
-    let brandNameLabel = UILabel()
+    let brandNameLabel = UILabel().then {
+        $0.textColor = .white
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
+    }
     
     let productLabel = UILabel()
     
@@ -26,6 +31,14 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addView() {
+        
+    }
+    
+    func setLayout() {
+        
     }
     
 }
