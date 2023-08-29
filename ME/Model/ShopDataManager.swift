@@ -32,4 +32,9 @@ final class ShopDataManager {
         ]
     }
     
+    // MARK: - Get Exercise Data
+    func getShopData() -> [Shop] {
+        return shopDataArray
+    }
+    
 }
