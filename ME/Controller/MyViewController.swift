@@ -160,7 +160,7 @@ final class MyViewController: UIViewController {
         }
         
     }
-    
+    // MARK: - Check Button Action
     @objc func checkButtonTapped() {
         dismiss(animated: true)
         print("buttonTapped")

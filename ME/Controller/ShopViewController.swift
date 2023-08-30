@@ -54,10 +54,12 @@ final class ShopViewController: UIViewController {
         productList = shopDataManager.getShopData()
     }
     
+    // MARK: - Add View
     private func addView() {
         [mainLabel, collectionView].forEach { view.addSubview($0) }
     }
     
+    // MARK: - Layout
     private func setupLayout() {
         mainLabel.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(6)
@@ -73,7 +75,7 @@ final class ShopViewController: UIViewController {
     
 }
 
-
+// MARK: - ShopViewController Exension
 extension ShopViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productList.count

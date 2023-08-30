@@ -9,6 +9,7 @@ import UIKit
 
 final class TabBarViewController: UITabBarController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,7 @@ final class TabBarViewController: UITabBarController {
         setViewControllers([navigationHome, navigationShop], animated: false)
     }
     
+    // MARK: - Layout
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         

@@ -9,6 +9,7 @@ import UIKit
 
 final class TagViewController: UIViewController {
     
+    // MARK: - Properties
     private let mainLabel = UILabel().then {
         $0.text = "다양한 태그를 수집해 보세요"
         $0.textColor = .white

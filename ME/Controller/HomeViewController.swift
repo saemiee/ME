@@ -167,17 +167,20 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: - MyButton Action
     @objc func myTapped(_ sender: UITapGestureRecognizer) {
         let myVC = MyViewController()
         myVC.modalPresentationStyle = .automatic
         present(myVC, animated: true)
     }
     
+    // MARK: - MoreButton Action
     @objc func exerciseMoreTappend() {
         let exerciseVC = ExerciseViewController()
         navigationController?.pushViewController(exerciseVC, animated: true)
     }
     
+    // MARK: - TagButton Action
     @objc func tagMoreTapped() {
         let tagVC = TagViewController()
         navigationController?.pushViewController(tagVC, animated: true)

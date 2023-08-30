@@ -11,6 +11,7 @@ import Then
 
 final class ExerciseViewController: UIViewController {
     
+    // MARK: - Properties
     private let flowLayout = UICollectionViewFlowLayout().then {
       $0.scrollDirection = .vertical
       $0.minimumLineSpacing = 18.0
