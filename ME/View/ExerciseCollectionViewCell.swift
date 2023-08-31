@@ -82,6 +82,7 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
         circle.layer.cornerRadius = circle.frame.height / 2
     }
     
+    // MARK: - Layout
     func setLayout() {
         circle.snp.makeConstraints {
             $0.width.height.equalTo(48)

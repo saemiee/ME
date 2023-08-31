@@ -11,6 +11,9 @@
 		840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */; };
 		840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6A2A9B4EDA0016BD0B /* Shop.swift */; };
 		840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */; };
+		840A5B6F2AA0A4A80016BD0B /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */; };
+		840A5B712AA0A5650016BD0B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B702AA0A5650016BD0B /* Tag.swift */; };
+		840A5B732AA0A5930016BD0B /* TagDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B722AA0A5930016BD0B /* TagDataManager.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 		840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		840A5B6A2A9B4EDA0016BD0B /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDataManager.swift; sourceTree = "<group>"; };
+		840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		840A5B702AA0A5650016BD0B /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		840A5B722AA0A5930016BD0B /* TagDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDataManager.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
 				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
+				840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
 				840A5B6A2A9B4EDA0016BD0B /* Shop.swift */,
 				840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */,
+				840A5B702AA0A5650016BD0B /* Tag.swift */,
+				840A5B722AA0A5930016BD0B /* TagDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +302,8 @@
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
 				8457A8552A8E13DC0009150D /* MyView.swift in Sources */,
+				840A5B6F2AA0A4A80016BD0B /* TagCollectionViewCell.swift in Sources */,
+				840A5B732AA0A5930016BD0B /* TagDataManager.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
@@ -302,6 +313,7 @@
 				847B23052A962D6C000B79AB /* MainTagView.swift in Sources */,
 				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
+				840A5B712AA0A5650016BD0B /* Tag.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

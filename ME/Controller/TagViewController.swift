@@ -10,10 +10,22 @@ import UIKit
 final class TagViewController: UIViewController {
     
     // MARK: - Properties
+    var tagList: [Tag] = []
+    
+    var tagDataManager = TagDataManager()
+    
     private let mainLabel = UILabel().then {
         $0.text = "다양한 태그를 수집해 보세요"
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+    }
+    
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init()).then {
+        $0.isScrollEnabled = true
+        $0.showsHorizontalScrollIndicator = false
+        $0.showsVerticalScrollIndicator = true
+        $0.backgroundColor = .clear
+        $0.clipsToBounds = true
     }
 
     // MARK: - Life Cycle
@@ -22,6 +34,8 @@ final class TagViewController: UIViewController {
         
         view.backgroundColor = .background
         setupNavBar()
+        setupCollectionView()
+        setDatas()
         addView()
         setupLayout()
     }
@@ -42,9 +56,23 @@ final class TagViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
+    // MARK: - Collection Setting
+    func setupCollectionView() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        collectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
+    }
+
+    // MARK: - Data Setting
+    func setDatas() {
+        tagDataManager.makeTagData()
+        tagList = tagDataManager.getTagData()
+    }
+    
     // MARK: - Add View
     func addView() {
-        view.addSubview(mainLabel)
+        [mainLabel, collectionView].forEach { view.addSubview($0) }
     }
 
     // MARK: - Layout
@@ -53,6 +81,45 @@ final class TagViewController: UIViewController {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.equalToSuperview().inset(15)
         }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(self.mainLabel.snp.bottom).offset(16)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview().inset(15)
+        }
     }
 
+}
+
+extension TagViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tagList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.identifier, for: indexPath) as! TagCollectionViewCell
+        
+        cell.tagImage.image = tagList[indexPath.row].tagImage
+        cell.tagLabel.text = tagList[indexPath.row].tagName
+    
+        return cell
+    }
+}
+
+extension TagViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 26
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = 117
+        let height = 125
+        
+        let size = CGSize(width: width, height: height)
+        return size
+    }
 }

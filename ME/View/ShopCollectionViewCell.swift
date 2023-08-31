@@ -21,9 +21,9 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     }
     
     let backgroundBlur = UIView().then {
-        $0.backgroundColor = .blurGray
+        $0.backgroundColor = .clear
         $0.layer.shadowColor = UIColor.blurGray.cgColor
-        $0.layer.shadowOpacity = 1
+        $0.layer.shadowOpacity = 0.2
         $0.layer.shadowRadius = 30
     }
 
