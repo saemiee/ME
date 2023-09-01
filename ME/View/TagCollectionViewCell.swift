@@ -40,10 +40,8 @@ final class TagCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     private func setLayout() {
         tagImage.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(8)
-        }
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()        }
         
         tagLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()

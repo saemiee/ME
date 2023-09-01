@@ -85,7 +85,7 @@ final class TagViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.top.equalTo(self.mainLabel.snp.bottom).offset(16)
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.leading.trailing.equalToSuperview().inset(33)
         }
     }
 
@@ -108,16 +108,16 @@ extension TagViewController: UICollectionViewDataSource {
 
 extension TagViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 26
+        return 41
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 6
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 117
-        let height = 125
+        let width = 99
+        let height = 99
         
         let size = CGSize(width: width, height: height)
         return size

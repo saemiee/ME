@@ -20,11 +20,9 @@ final class ShopCollectionViewCell: UICollectionViewCell {
         $0.layer.masksToBounds = true
     }
     
-    let backgroundBlur = UIView().then {
-        $0.backgroundColor = .clear
-        $0.layer.shadowColor = UIColor.blurGray.cgColor
-        $0.layer.shadowOpacity = 0.2
-        $0.layer.shadowRadius = 30
+    let gradientLayer = CAGradientLayer().then {
+        $0.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+        $0.locations = [0.0, 0.5, 1.0]
     }
 
     let productImage = UIImageView()
@@ -60,14 +58,14 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Add View
     func addView() {
-        [background, backgroundBlur, productImage, brandNameLabel, productLabel, priceLabel].forEach { self.addSubview($0) }
+        [background, productImage, brandNameLabel, productLabel, priceLabel].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        backgroundBlur.layer.cornerRadius = backgroundBlur.frame.width / 2
+        gradientLayer.frame = background.bounds
     }
     
     func setLayout() {
@@ -76,13 +74,6 @@ final class ShopCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(188)
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
-        }
-        
-        backgroundBlur.snp.makeConstraints {
-            $0.top.equalTo(background.snp.top).offset(23)
-            $0.leading.equalTo(background.snp.leading).offset(23)
-            $0.trailing.equalTo(background.snp.trailing).offset(-23)
-            $0.bottom.equalTo(background.snp.bottom).offset(-45)
         }
 
         productImage.snp.makeConstraints {
