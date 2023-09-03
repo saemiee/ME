@@ -10,9 +10,6 @@ import SnapKit
 import Then
 
 final class ExerciseCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "ExerciseCell"
-    
     // MARK: - Properties
     let circle = UIView().then {
         $0.backgroundColor = .darkGray

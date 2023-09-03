@@ -72,7 +72,7 @@ final class ExerciseViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(ExerciseCollectionViewCell.self, forCellWithReuseIdentifier: ExerciseCollectionViewCell.identifier)
+        collectionView.register(ExerciseCollectionViewCell.self, forCellWithReuseIdentifier: Cell.exerciseCellIdentifier)
     }
 
     // MARK: - Data Setting
@@ -110,7 +110,7 @@ extension ExerciseViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseCollectionViewCell.identifier, for: indexPath) as! ExerciseCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.exerciseCellIdentifier, for: indexPath) as! ExerciseCollectionViewCell
         
         cell.exerciseImage.image = exerciseList[indexPath.row].exerciseImage
         cell.exerciseLabel.text = exerciseList[indexPath.row].exercise

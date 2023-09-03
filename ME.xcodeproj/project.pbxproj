@@ -38,6 +38,7 @@
 		8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84A2A8B73240009150D /* ShopViewController.swift */; };
 		8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84C2A8B73D90009150D /* AccessGuideView.swift */; };
 		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
+		84766D812AA4509700696B8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84766D802AA4509700696B8A /* Constants.swift */; };
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
 		847B23052A962D6C000B79AB /* MainTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* MainTagView.swift */; };
 		847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23062A98CE07000B79AB /* TabBarViewController.swift */; };
@@ -76,6 +77,7 @@
 		8457A84A2A8B73240009150D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		8457A84C2A8B73D90009150D /* AccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessGuideView.swift; sourceTree = "<group>"; };
 		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		84766D802AA4509700696B8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
 		847B23042A962D6C000B79AB /* MainTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTagView.swift; sourceTree = "<group>"; };
 		847B23062A98CE07000B79AB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				840A5B672A9B43FB0016BD0B /* ME.entitlements */,
+				84766D7F2AA4506600696B8A /* Helpers */,
 				8447E5412A82150E00EDCE22 /* Extension */,
 				8447E53E2A82112F00EDCE22 /* Resources */,
 				8457A80A2A872E130009150D /* Model */,
@@ -148,12 +151,10 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */,
+				84766D822AA4524100696B8A /* Cell */,
 				8457A8532A8E13BD0009150D /* HomeView */,
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
-				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
-				840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +206,24 @@
 				8457A8542A8E13DC0009150D /* MyView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		84766D7F2AA4506600696B8A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84766D802AA4509700696B8A /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84766D822AA4524100696B8A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
+				840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */,
+				840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +313,7 @@
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
 				847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */,
+				84766D812AA4509700696B8A /* Constants.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
 				8457A8492A8B72C30009150D /* HomeViewController.swift in Sources */,

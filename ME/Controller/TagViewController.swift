@@ -61,7 +61,7 @@ final class TagViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        collectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
+        collectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: Cell.tagCellIdentifier)
     }
 
     // MARK: - Data Setting
@@ -97,7 +97,7 @@ extension TagViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.identifier, for: indexPath) as! TagCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
         
         cell.tagImage.image = tagList[indexPath.row].tagImage
         cell.tagLabel.text = tagList[indexPath.row].tagName

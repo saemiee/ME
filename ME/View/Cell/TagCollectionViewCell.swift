@@ -10,8 +10,6 @@ import SnapKit
 import Then
 
 final class TagCollectionViewCell: UICollectionViewCell {
-    static let identifier = "TagCell"
-    
     // MARK: - Properties
     let tagImage = UIImageView()
     

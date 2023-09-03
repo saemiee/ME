@@ -10,20 +10,14 @@ import SnapKit
 import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "ExerciseCell"
-    
     // MARK: - Properties
-    lazy var background = UIView().then {
+    let background = UIView().then {
         $0.backgroundColor = .gray
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
     }
     
-    let gradientLayer = CAGradientLayer().then {
-        $0.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
-        $0.locations = [0.0, 0.5, 1.0]
-    }
+    let gradientLayer = CAGradientLayer()
 
     let productImage = UIImageView()
     

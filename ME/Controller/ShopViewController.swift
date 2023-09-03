@@ -45,7 +45,7 @@ final class ShopViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        collectionView.register(ShopCollectionViewCell.self, forCellWithReuseIdentifier: ShopCollectionViewCell.identifier)
+        collectionView.register(ShopCollectionViewCell.self, forCellWithReuseIdentifier: Cell.shopCellIdentifier)
     }
 
     // MARK: - Data Setting
@@ -82,7 +82,7 @@ extension ShopViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopCollectionViewCell.identifier, for: indexPath) as! ShopCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.shopCellIdentifier, for: indexPath) as! ShopCollectionViewCell
         
         cell.productImage.image = productList[indexPath.row].productImage
         cell.brandNameLabel.text = productList[indexPath.row].brandName
