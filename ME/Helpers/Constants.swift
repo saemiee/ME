@@ -22,8 +22,9 @@ public enum tagCell {
 }
 
 public enum shopCell {
-    static let spacingWitdh: CGFloat = 1
-    static let spacingHeight: CGFloat = 1
-    static let cellColumns: CGFloat = 2
+    static let lineSpacing: CGFloat = 16
+    static let interitemSpacing: CGFloat = 18
+    static let cellHeight: CGFloat = 267
+    static let cellWidth: CGFloat = 166
 }
 

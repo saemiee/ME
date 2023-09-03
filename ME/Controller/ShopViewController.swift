@@ -78,7 +78,7 @@ final class ShopViewController: UIViewController {
 // MARK: - ShopViewController Exension
 extension ShopViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productList.count
+        return self.productList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,16 +95,16 @@ extension ShopViewController: UICollectionViewDataSource {
 
 extension ShopViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return shopCell.lineSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 18
+        return shopCell.interitemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 166
-        let height = 267
+        let width = shopCell.cellWidth
+        let height = shopCell.cellHeight
         
         let size = CGSize(width: width, height: height)
         return size
