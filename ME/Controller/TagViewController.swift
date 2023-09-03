@@ -91,6 +91,7 @@ final class TagViewController: UIViewController {
 
 }
 
+// MARK: - TagViewController Extension
 extension TagViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tagList.count
@@ -108,16 +109,16 @@ extension TagViewController: UICollectionViewDataSource {
 
 extension TagViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 41
+        return tagCell.lineSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 13
+        return tagCell.interitemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 99
-        let height = 99
+        let width = (self.collectionView.bounds.width - tagCell.interitemSpacing * (tagCell.cellColumns - 1)) / tagCell.cellColumns
+        let height = tagCell.cellHeight
         
         let size = CGSize(width: width, height: height)
         return size

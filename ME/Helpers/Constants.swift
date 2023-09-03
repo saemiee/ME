@@ -14,3 +14,16 @@ public enum Cell {
     static let tagCellIdentifier = "TagCell"
 }
 
+public enum tagCell {
+    static let lineSpacing: CGFloat = 41
+    static let interitemSpacing: CGFloat = 13
+    static let cellHeight: CGFloat = 99
+    static let cellColumns: CGFloat = 3
+}
+
+public enum shopCell {
+    static let spacingWitdh: CGFloat = 1
+    static let spacingHeight: CGFloat = 1
+    static let cellColumns: CGFloat = 2
+}
+
