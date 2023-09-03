@@ -14,11 +14,9 @@ public enum Cell {
     static let tagCellIdentifier = "TagCell"
 }
 
-public enum tagCell {
-    static let lineSpacing: CGFloat = 41
-    static let interitemSpacing: CGFloat = 13
-    static let cellHeight: CGFloat = 99
-    static let cellColumns: CGFloat = 3
+public enum exerciseCell {
+    static let cellWidth: CGFloat = 350
+    static let cellHeith: CGFloat = 66
 }
 
 public enum shopCell {
@@ -27,4 +25,12 @@ public enum shopCell {
     static let cellHeight: CGFloat = 267
     static let cellWidth: CGFloat = 166
 }
+
+public enum tagCell {
+    static let lineSpacing: CGFloat = 41
+    static let interitemSpacing: CGFloat = 13
+    static let cellHeight: CGFloat = 99
+    static let cellColumns: CGFloat = 3
+}
+
 
