@@ -11,13 +11,13 @@ import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
+    let gradientLayer = CAGradientLayer()
+    
     let background = UIView().then {
         $0.backgroundColor = .gray
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
     }
-    
-    let gradientLayer = CAGradientLayer()
 
     let productImage = UIImageView()
     
@@ -60,6 +60,19 @@ final class ShopCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         gradientLayer.frame = background.bounds
+        
+        let colors: [CGColor] = [
+            .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1),
+            .init(red: 0.23, green: 0.23, blue: 0.23, alpha: 1),
+            .init(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        ]
+        gradientLayer.colors = colors
+        
+        gradientLayer.type = .radial
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        
+        background.layer.addSublayer(gradientLayer)
     }
     
     func setLayout() {
