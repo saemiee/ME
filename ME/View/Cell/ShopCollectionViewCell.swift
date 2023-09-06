@@ -63,7 +63,7 @@ final class ShopCollectionViewCell: UICollectionViewCell {
         
         let colors: [CGColor] = [
             .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1),
-            .init(red: 0.23, green: 0.23, blue: 0.23, alpha: 1),
+            .init(red: 0.225, green: 0.225, blue: 0.225, alpha: 1),
             .init(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         ]
         gradientLayer.colors = colors

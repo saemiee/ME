@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Then
 
 final class TabBarViewController: UITabBarController {
+    
+//    private let my = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: self, action: #selector(myTapped))
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -17,7 +20,7 @@ final class TabBarViewController: UITabBarController {
         let shopVC = ShopViewController()
         
         
-        homeVC.title = "Home"
+        homeVC.title = "ME"
         shopVC.title = "Shop"
         
         homeVC.tabBarItem.image = UIImage.init(systemName: "house")

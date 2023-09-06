@@ -12,7 +12,7 @@ import Then
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
-    private let setting = UIButton().then {
+    private let my = UIButton().then {
         $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34)), for: .normal)
         $0.tintColor = .yellow
         $0.backgroundColor = .clear
@@ -80,63 +80,63 @@ final class HomeViewController: UIViewController {
     // MARK: - Add View
     private func addView() {
         [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
-        [setting, myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
+        [my, myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
     // MARK: - Layout
     private func setLayout() {
-        setting.snp.makeConstraints {
+        my.snp.makeConstraints {
             $0.width.height.equalTo(32)
-            $0.trailing.equalToSuperview().inset(30)
-            $0.top.equalToSuperview().inset(130)
+            $0.top.equalToSuperview().inset(110)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
-            $0.leading.equalToSuperview().inset(30)
+            $0.leading.equalToSuperview().inset(20)
             $0.height.equalTo(24)
         }
         
         myView.snp.makeConstraints {
             $0.top.equalTo(myLabel.snp.bottom).offset(9)
             $0.bottom.equalToSuperview().inset(488)
-            $0.leading.trailing.equalToSuperview().inset(32)
+            $0.leading.trailing.equalToSuperview().inset(22)
         }
         
         exercisesLabel.snp.makeConstraints {
             $0.top.equalTo(myView.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().inset(30)
+            $0.leading.equalToSuperview().inset(20)
             $0.height.equalTo(24)
         }
         
         exercisesMore.snp.makeConstraints {
             $0.top.equalTo(myView.snp.bottom).offset(34)
-            $0.trailing.equalToSuperview().inset(30)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         exerciseCard1.snp.makeConstraints {
-            $0.width.equalTo(160)
+            $0.width.equalTo(164)
             $0.height.equalTo(67)
             $0.leading.equalTo(exerciseCardView.snp.leading)
             $0.top.equalTo(exerciseCardView.snp.top)
         }
         
         exerciseCard2.snp.makeConstraints {
-            $0.width.equalTo(160)
+            $0.width.equalTo(164)
             $0.height.equalTo(67)
             $0.trailing.equalTo(exerciseCardView.snp.trailing)
             $0.top.equalTo(exerciseCardView.snp.top)
         }
         
         exerciseCard3.snp.makeConstraints {
-            $0.width.equalTo(160)
+            $0.width.equalTo(164)
             $0.height.equalTo(67)
             $0.leading.equalTo(exerciseCardView.snp.leading)
             $0.bottom.equalTo(exerciseCardView.snp.bottom)
         }
         
         exerciseCard4.snp.makeConstraints {
-            $0.width.equalTo(160)
+            $0.width.equalTo(164)
             $0.height.equalTo(67)
             $0.trailing.equalTo(exerciseCardView.snp.trailing)
             $0.bottom.equalTo(exerciseCardView.snp.bottom)
@@ -146,32 +146,31 @@ final class HomeViewController: UIViewController {
             $0.top.equalTo(exercisesLabel.snp.bottom).offset(9)
             $0.bottom.equalToSuperview().inset(276)
             $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().inset(30)
+            $0.leading.equalToSuperview().inset(26)
         }
         
         tagLabel.snp.makeConstraints {
             $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().inset(30)
+            $0.leading.equalToSuperview().inset(20)
         }
         
         tagMore.snp.makeConstraints {
             $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
-            $0.trailing.equalToSuperview().inset(30)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         tagView.snp.makeConstraints {
             $0.top.equalTo(tagLabel.snp.bottom).offset(9)
             $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().inset(30)
+            $0.leading.equalToSuperview().inset(20)
             $0.height.equalTo(107)
         }
     }
-    
+ 
     // MARK: - MyButton Action
-    @objc func myTapped(_ sender: UITapGestureRecognizer) {
+    @objc func myTapped() {
         let myVC = MyViewController()
-        myVC.modalPresentationStyle = .automatic
-        present(myVC, animated: true)
+        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // MARK: - MoreButton Action
