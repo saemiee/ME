@@ -13,18 +13,18 @@ final class TagDataManager {
     
     func makeTagData() {
         tagDataArray = [
-            Tag(tagImage: UIImage(named: "welcome"), tagName: "WELCOME!"),
-            Tag(tagImage: UIImage(named: "pool"), tagName: "수영왕"),
-            Tag(tagImage: UIImage(named: "dancing"), tagName: "댄싱머신"),
-            Tag(tagImage: UIImage(named: "creditCard"), tagName: "결제담당"),
-            Tag(tagImage: UIImage(named: "rerb"), tagName: "자연인"),
-            Tag(tagImage: UIImage(named: "run"), tagName: "리틀 우사인볼트"),
-            Tag(tagImage: UIImage(named: "chocolate"), tagName: "초콜릿 복근"),
-            Tag(tagImage: UIImage(named: "pilates"), tagName: "바른자세"),
-            Tag(tagImage: UIImage(named: "personBiking"), tagName: "Best 라이더"),
-            Tag(tagImage: UIImage(named: "biceps"), tagName: "근력 UP"),
-            Tag(tagImage: UIImage(named: "rowing"), tagName: "Boat"),
-            Tag(tagImage: UIImage(named: "trophy"), tagName: "GOAT")
+            Tag(tagImage: UIImage(named: "welcome"), tagName: "WELCOME!",tagDescription: ""),
+            Tag(tagImage: UIImage(named: "pool"), tagName: "수영왕",tagDescription: ""),
+            Tag(tagImage: UIImage(named: "dancing"), tagName: "댄싱머신",tagDescription: ""),
+            Tag(tagImage: UIImage(named: "creditCard"), tagName: "결제담당", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "rerb"), tagName: "자연인", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "run"), tagName: "리틀 우사인볼트", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "chocolate"), tagName: "초콜릿 복근", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "pilates"), tagName: "바른자세", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "personBiking"), tagName: "Best 라이더", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "biceps"), tagName: "근력 UP", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "rowing"), tagName: "Boat", tagDescription: ""),
+            Tag(tagImage: UIImage(named: "trophy"), tagName: "GOAT", tagDescription: "")
         ]
     }
     

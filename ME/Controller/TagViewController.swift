@@ -124,3 +124,12 @@ extension TagViewController: UICollectionViewDelegateFlowLayout {
         return size
     }
 }
+
+extension TagViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = TagDetailViewController()
+        let currentItem = tagDataManager.getTagData()[indexPath.row]
+
+
+    }
+}

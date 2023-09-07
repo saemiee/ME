@@ -10,4 +10,5 @@ import UIKit
 struct Tag {
     var tagImage: UIImage?
     let tagName: String
+    let tagDescription: String
 }
