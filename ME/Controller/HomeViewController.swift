@@ -65,7 +65,7 @@ final class HomeViewController: UIViewController {
     private let exerciseCard3 = ExerciseCard()
     private let exerciseCard4 = ExerciseCard()
     
-    private let tagView = MainTagView()
+    private let tagView = HomeTagView()
     
     
     // MARK: - Life Cycle

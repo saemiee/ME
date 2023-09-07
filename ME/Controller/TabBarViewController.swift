@@ -9,8 +9,6 @@ import UIKit
 import Then
 
 final class TabBarViewController: UITabBarController {
-    
-//    private let my = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: self, action: #selector(myTapped))
 
     // MARK: - Life Cycle
     override func viewDidLoad() {

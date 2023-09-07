@@ -14,6 +14,7 @@
 		840A5B6F2AA0A4A80016BD0B /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */; };
 		840A5B712AA0A5650016BD0B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B702AA0A5650016BD0B /* Tag.swift */; };
 		840A5B732AA0A5930016BD0B /* TagDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B722AA0A5930016BD0B /* TagDataManager.swift */; };
+		8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432351E2AA9AC170086B90C /* TagDetailViewController.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -40,7 +41,7 @@
 		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
 		84766D812AA4509700696B8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84766D802AA4509700696B8A /* Constants.swift */; };
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
-		847B23052A962D6C000B79AB /* MainTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* MainTagView.swift */; };
+		847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* HomeTagView.swift */; };
 		847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23062A98CE07000B79AB /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		840A5B702AA0A5650016BD0B /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		840A5B722AA0A5930016BD0B /* TagDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDataManager.swift; sourceTree = "<group>"; };
+		8432351E2AA9AC170086B90C /* TagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailViewController.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		84766D802AA4509700696B8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
-		847B23042A962D6C000B79AB /* MainTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTagView.swift; sourceTree = "<group>"; };
+		847B23042A962D6C000B79AB /* HomeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTagView.swift; sourceTree = "<group>"; };
 		847B23062A98CE07000B79AB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843235252AA9E03F0086B90C /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				8457A80B2A872E540009150D /* Exercise.swift */,
+				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		843235262AA9E04A0086B90C /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				840A5B6A2A9B4EDA0016BD0B /* Shop.swift */,
+				840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		843235272AA9E0560086B90C /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				840A5B702AA0A5650016BD0B /* Tag.swift */,
+				840A5B722AA0A5930016BD0B /* TagDataManager.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 		8447E5142A820A1E00EDCE22 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +199,7 @@
 				8457A84A2A8B73240009150D /* ShopViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 				840A5B612A99E9480016BD0B /* MyViewController.swift */,
+				8432351E2AA9AC170086B90C /* TagDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,12 +218,9 @@
 		8457A80A2A872E130009150D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8457A80B2A872E540009150D /* Exercise.swift */,
-				8457A80D2A872F9B0009150D /* ExerciseDataManager.swift */,
-				840A5B6A2A9B4EDA0016BD0B /* Shop.swift */,
-				840A5B6C2A9B4F200016BD0B /* ShopDataManager.swift */,
-				840A5B702AA0A5650016BD0B /* Tag.swift */,
-				840A5B722AA0A5930016BD0B /* TagDataManager.swift */,
+				843235272AA9E0560086B90C /* Tag */,
+				843235262AA9E04A0086B90C /* Shop */,
+				843235252AA9E03F0086B90C /* Exercise */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				847B23022A909AAE000B79AB /* ExerciseCard.swift */,
-				847B23042A962D6C000B79AB /* MainTagView.swift */,
+				847B23042A962D6C000B79AB /* HomeTagView.swift */,
 				8457A8542A8E13DC0009150D /* MyView.swift */,
 			);
 			path = HomeView;
@@ -310,6 +337,7 @@
 				840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */,
 				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
+				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
 				847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */,
@@ -330,7 +358,7 @@
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
 				840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */,
-				847B23052A962D6C000B79AB /* MainTagView.swift in Sources */,
+				847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */,
 				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
 				840A5B712AA0A5650016BD0B /* Tag.swift in Sources */,

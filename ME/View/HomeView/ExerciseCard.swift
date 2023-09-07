@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ExerciseCard: UIView {
+final class ExerciseCard: UIView {
     
     // MARK: - Properties
     private let exerciseImage = UIImageView().then {
