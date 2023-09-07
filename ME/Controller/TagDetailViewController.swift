@@ -31,12 +31,15 @@ final class TagDetailViewController: UIViewController {
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.backgroundColor = .yellow
+        $0.addTarget(self, action: #selecotr(chekButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Life Cycel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addView()
+        setLayout()
     }
     
     // MARK: - Add View
@@ -67,5 +70,9 @@ final class TagDetailViewController: UIViewController {
             $0.bottom.equalToSuperview().inset(57)
         }
     }
-
+    
+    // MARK: - check Button Tapped
+    @objc func chekButtonTapped() {
+        dismiss(animated: true)
+    }
 }
