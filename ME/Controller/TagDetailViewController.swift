@@ -14,7 +14,7 @@ final class TagDetailViewController: UIViewController {
     // MARK: - Properties
     private let detailView = TagDetailView()
     
-    var tag: Tag?
+    var tagItem: Tag?
     
     override func loadView() {
         view = detailView
@@ -23,5 +23,10 @@ final class TagDetailViewController: UIViewController {
     // MARK: - Life Cycel
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Data Setting
+    private func setData() {
+        detailView.tagItem = tagItem
     }
 }
