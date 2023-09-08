@@ -28,6 +28,9 @@ final class TagDetailView: UIView {
     let tagDescription = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        $0.numberOfLines = 2
+        $0.textAlignment = .center
+        $0.setLineSpacing(spacing: 10)
     }
     
     let tagImage = UIImageView()
@@ -72,8 +75,9 @@ final class TagDetailView: UIView {
         }
         
         tagImage.snp.makeConstraints {
-            $0.top.equalTo(tagDescription.snp.bottom).offset(50)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(tagDescription.snp.bottom)
+            $0.bottom.equalTo(checkButton.snp.top).offset(-148)
+            $0.leading.trailing.equalToSuperview()
         }
         
         checkButton.snp.makeConstraints {
