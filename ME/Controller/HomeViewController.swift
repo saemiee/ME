@@ -67,7 +67,6 @@ final class HomeViewController: UIViewController {
     
     private let tagView = HomeTagView()
     
-    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

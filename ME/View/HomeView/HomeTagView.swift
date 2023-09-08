@@ -64,7 +64,7 @@ final class HomeTagView: UIView {
         $0.spacing = 32
         $0.axis = .horizontal
         $0.distribution = .fillEqually
-        $0.alignment = .fill
+        $0.alignment = .center
     }
     
     // MARK: - init
@@ -105,8 +105,9 @@ final class HomeTagView: UIView {
     
     private func setLayout() {
         stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.top.bottom.equalToSuperview().inset(12)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.top.equalToSuperview().inset(4)
+            $0.bottom.equalToSuperview().inset(14)
         }
     }
 }

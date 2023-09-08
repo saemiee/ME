@@ -63,7 +63,7 @@ final class ExerciseCard: UIView {
     // MARK: - Layout
     private func setLayout() {
         exerciseImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
         }
         
