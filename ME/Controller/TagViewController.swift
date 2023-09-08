@@ -10,8 +10,6 @@ import UIKit
 final class TagViewController: UIViewController {
     
     // MARK: - Properties
-    var tagList: [Tag] = []
-    
     var tagDataManager = TagDataManager()
     
     private let mainLabel = UILabel().then {
@@ -67,7 +65,6 @@ final class TagViewController: UIViewController {
     // MARK: - Data Setting
     func setDatas() {
         tagDataManager.makeTagData()
-        tagList = tagDataManager.getTagData()
     }
     
     // MARK: - Add View
@@ -94,14 +91,14 @@ final class TagViewController: UIViewController {
 // MARK: - TagViewController Extension
 extension TagViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tagList.count
+        return tagDataManager.getTagData().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
         
-        cell.tagImage.image = tagList[indexPath.row].tagImage
-        cell.tagLabel.text = tagList[indexPath.row].tagName
+        cell.tagImage.image = tagDataManager.getTagData()[indexPath.row].tagImage
+        cell.tagLabel.text = tagDataManager.getTagData()[indexPath.row].tagName
     
         return cell
     }
@@ -129,7 +126,7 @@ extension TagViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = TagDetailViewController()
         let currentItem = tagDataManager.getTagData()[indexPath.row]
-        
+    
         detailVC.tagItem = currentItem
         
         detailVC.modalPresentationStyle = .fullScreen

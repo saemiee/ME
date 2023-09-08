@@ -24,6 +24,7 @@ final class TagDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setData()
         setupButtonAction()
     }
     

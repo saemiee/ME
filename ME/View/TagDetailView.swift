@@ -13,10 +13,10 @@ final class TagDetailView: UIView {
     
     var tagItem: Tag? {
         didSet {
-            guard var tag = tagItem else { return }
-            tagLabel.text = tagItem!.tagName
-            tagDescription.text = tagItem!.tagDescription
-            tagImage.image = tagItem!.tagImage
+            guard var tagItem = tagItem else { return }
+            tagLabel.text = tagItem.tagName
+            tagDescription.text = tagItem.tagDescription
+            tagImage.image = tagItem.tagImage
         }
     }
     
@@ -45,6 +45,7 @@ final class TagDetailView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
         addView()
         setLayout()
     }
@@ -59,12 +60,6 @@ final class TagDetailView: UIView {
     }
     
     // MARK: - Layout
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        backgroundColor = .white
-    }
-    
     private func setLayout() {
         tagLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(123)

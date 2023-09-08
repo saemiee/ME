@@ -33,5 +33,11 @@ final class TagDataManager {
         return tagDataArray
     }
     
+    subscript(index: Int) -> Tag {
+        get {
+            return tagDataArray[index]
+        }
+    }
+    
 }
 
