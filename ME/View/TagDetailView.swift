@@ -39,7 +39,6 @@ final class TagDetailView: UIView {
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.backgroundColor = .yellow
-        $0.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - init
@@ -60,6 +59,12 @@ final class TagDetailView: UIView {
     }
     
     // MARK: - Layout
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        backgroundColor = .white
+    }
+    
     private func setLayout() {
         tagLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(123)
@@ -81,10 +86,5 @@ final class TagDetailView: UIView {
             $0.height.equalTo(57)
             $0.bottom.equalToSuperview().inset(57)
         }
-    }
-    
-    // MARK: - check Button Tapped
-    @objc func chekButtonTapped() {
-        print("button Tapped")
     }
 }

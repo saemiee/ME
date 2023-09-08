@@ -23,10 +23,23 @@ final class TagDetailViewController: UIViewController {
     // MARK: - Life Cycel
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupButtonAction()
     }
     
     // MARK: - Data Setting
     private func setData() {
         detailView.tagItem = tagItem
+    }
+    
+    // MARK: - Button Action
+    func setupButtonAction() {
+        detailView.checkButton.addTarget(self, action: #selector(chekButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - check Button Tapped
+    @objc func chekButtonTapped() {
+        dismiss(animated: true)
+        print("Tapped")
     }
 }

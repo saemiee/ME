@@ -129,7 +129,10 @@ extension TagViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = TagDetailViewController()
         let currentItem = tagDataManager.getTagData()[indexPath.row]
-
-
+        
+        detailVC.tagItem = currentItem
+        
+        detailVC.modalPresentationStyle = .fullScreen
+        present(detailVC, animated: true)
     }
 }
