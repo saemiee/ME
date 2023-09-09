@@ -16,6 +16,8 @@
 		840A5B732AA0A5930016BD0B /* TagDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A5B722AA0A5930016BD0B /* TagDataManager.swift */; };
 		8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432351E2AA9AC170086B90C /* TagDetailViewController.swift */; };
 		8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352A2AA9ED250086B90C /* TagDetailView.swift */; };
+		8432352D2AAC560A0086B90C /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */; };
+		8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352E2AAC57AF0086B90C /* ShopDetailView.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		840A5B722AA0A5930016BD0B /* TagDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDataManager.swift; sourceTree = "<group>"; };
 		8432351E2AA9AC170086B90C /* TagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailViewController.swift; sourceTree = "<group>"; };
 		8432352A2AA9ED250086B90C /* TagDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailView.swift; sourceTree = "<group>"; };
+		8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		8432352E2AAC57AF0086B90C /* ShopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
 				8432352A2AA9ED250086B90C /* TagDetailView.swift */,
+				8432352E2AAC57AF0086B90C /* ShopDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,8 +204,9 @@
 				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
 				8457A8442A8A31BA0009150D /* TagViewController.swift */,
 				8432351E2AA9AC170086B90C /* TagDetailViewController.swift */,
-				8457A8482A8B72C30009150D /* HomeViewController.swift */,
 				8457A84A2A8B73240009150D /* ShopViewController.swift */,
+				8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */,
+				8457A8482A8B72C30009150D /* HomeViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 				840A5B612A99E9480016BD0B /* MyViewController.swift */,
 			);
@@ -360,6 +366,7 @@
 				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
+				8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
 				840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */,
 				847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */,
@@ -367,6 +374,7 @@
 				8447E5DC2A84F1AD00EDCE22 /* ExerciseViewController.swift in Sources */,
 				840A5B712AA0A5650016BD0B /* Tag.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
+				8432352D2AAC560A0086B90C /* ShopDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

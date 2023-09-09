@@ -12,8 +12,6 @@ import Then
 final class ShopViewController: UIViewController {
     
     // MARK: - Properties
-    var productList: [Shop] = []
-    
     var shopDataManager = ShopDataManager()
     
     private let mainLabel = UILabel().then {
@@ -51,7 +49,6 @@ final class ShopViewController: UIViewController {
     // MARK: - Data Setting
     func setDatas() {
         shopDataManager.makeShopData()
-        productList = shopDataManager.getShopData()
     }
     
     // MARK: - Add View
@@ -78,16 +75,16 @@ final class ShopViewController: UIViewController {
 // MARK: - ShopViewController Exension
 extension ShopViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.productList.count
+        return shopDataManager.getShopData().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.shopCellIdentifier, for: indexPath) as! ShopCollectionViewCell
         
-        cell.productImage.image = productList[indexPath.row].productImage
-        cell.brandNameLabel.text = productList[indexPath.row].brandName
-        cell.productLabel.text = productList[indexPath.row].productName
-        cell.priceLabel.text = "\(productList[indexPath.row].price) p"
+        cell.productImage.image = shopDataManager.getShopData()[indexPath.row].productImage
+        cell.brandNameLabel.text = shopDataManager.getShopData()[indexPath.row].brandName
+        cell.productLabel.text = shopDataManager.getShopData()[indexPath.row].productName
+        cell.priceLabel.text = "\(shopDataManager.getShopData()[indexPath.row].price) p"
     
         return cell
     }
@@ -110,4 +107,14 @@ extension ShopViewController: UICollectionViewDelegateFlowLayout {
         return size
     }
 
+}
+
+extension ShopViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = ShopDetailViewController()
+        let currentItem = shopDataManager.getShopData()[indexPath.row]
+        
+        detailVC.modalPresentationStyle = .fullScreen
+        present(detailVC, animated: true)
+    }
 }

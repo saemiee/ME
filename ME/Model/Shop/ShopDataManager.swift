@@ -37,4 +37,10 @@ final class ShopDataManager {
         return shopDataArray
     }
     
+    subscript(index: Int) -> Shop {
+        get {
+            return shopDataArray[index]
+        }
+    }
+    
 }
