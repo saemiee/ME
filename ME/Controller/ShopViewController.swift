@@ -114,6 +114,8 @@ extension ShopViewController: UICollectionViewDelegate {
         let detailVC = ShopDetailViewController()
         let currentItem = shopDataManager.getShopData()[indexPath.row]
         
+        detailVC.product = currentItem
+        
         detailVC.modalPresentationStyle = .fullScreen
         present(detailVC, animated: true)
     }

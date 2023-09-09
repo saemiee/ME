@@ -10,11 +10,27 @@ import SnapKit
 import Then
 
 final class ShopDetailViewController: UIViewController {
-
-    // MARK: - Life Cycle
+    
+    // MARK: - Properties
+    private let detailView = ShopDetailView()
+    
+    var product: Shop?
+    
+    override func loadView() {
+        view = detailView
+    }
+    
+    // MARK: - Life Cycel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
+        setData()
     }
+    
+    // MARK: - Data Setting
+    private func setData() {
+        detailView.product = product
+    }
+    
 }
+    

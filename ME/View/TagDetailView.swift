@@ -11,6 +11,7 @@ import Then
 
 final class TagDetailView: UIView {
     
+    // MARK: - Properties
     var tagItem: Tag? {
         didSet {
             guard var tagItem = tagItem else { return }
@@ -47,7 +48,6 @@ final class TagDetailView: UIView {
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         
         addView()
         setLayout()
