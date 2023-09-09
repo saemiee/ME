@@ -32,5 +32,15 @@ final class ShopDetailViewController: UIViewController {
         detailView.product = product
     }
     
+    // MARK: - Button Action
+    func setupButtonAction() {
+        detailView.buyButton.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - Buy Button Tapped
+    @objc func buyButtonTapped() {
+        print("Tapped")
+    }
+    
 }
     

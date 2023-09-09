@@ -30,6 +30,8 @@ final class ShopDetailView: UIView {
     
     let price = UILabel()
     
+    let buyButton = UIButton()
+    
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,7 +46,7 @@ final class ShopDetailView: UIView {
     
     // MARK:  - Add View
     private func addView() {
-        
+        [productImage, productLabel, brandLabel, price, buyButton].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout

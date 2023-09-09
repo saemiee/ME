@@ -21,6 +21,10 @@ final class TagDetailView: UIView {
         }
     }
     
+    let background = UIView().then {
+        $0.backgroundColor = .clear
+    }
+    
     let tagLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 31, weight: .bold)
@@ -59,11 +63,24 @@ final class TagDetailView: UIView {
     
     // MARK: - Add View
     private func addView() {
-        [tagLabel, tagDescription, tagImage, checkButton].forEach { self.addSubview($0) }
+        [background, tagLabel, tagDescription, tagImage, checkButton].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let blurEffect = UIBlurEffect(style: .regular)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.frame = self.frame
+        self.background.addSubview(visualEffectView)
+    }
+    
     private func setLayout() {
+        background.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
         tagLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(123)
             $0.centerX.equalToSuperview()

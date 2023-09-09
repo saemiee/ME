@@ -129,7 +129,7 @@ extension TagViewController: UICollectionViewDelegate {
     
         detailVC.tagItem = currentItem
         
-        detailVC.modalPresentationStyle = .fullScreen
+        detailVC.modalPresentationStyle = .overFullScreen
         present(detailVC, animated: true)
     }
 }
