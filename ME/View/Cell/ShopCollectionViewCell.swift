@@ -11,8 +11,6 @@ import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
-    let gradientLayer = CAGradientLayer()
-    
     let background = UIView().then {
         $0.backgroundColor = .gray
         $0.layer.cornerRadius = 10
@@ -58,6 +56,8 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        let gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = background.bounds
         

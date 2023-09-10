@@ -14,15 +14,18 @@ final class ShopDetailView: UIView {
     // MARK: - Properties
     var product: Shop? {
         didSet {
-            guard var product = product else { return }
+            guard let product = product else { return }
             productImage.image = product.productImage
             productLabel.text = product.productName
             brandLabel.text = product.brandName
-            priceLabel.text = product.brandName
+            priceLabel.text = String(product.price)
+            notice.text = product.notice
         }
     }
     
-    let gradientLayer = CAGradientLayer()
+    let scrollView = UIScrollView().then {
+        $0.isScrollEnabled = true
+    }
     
     let background = UIView().then {
         $0.backgroundColor = .gray
@@ -47,6 +50,24 @@ final class ShopDetailView: UIView {
         $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     }
     
+    let divLine = UIView().then {
+        $0.backgroundColor = .lightGray
+    }
+    
+    let noticeLabel = UILabel().then {
+        $0.textColor = .lightGray
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        $0.text = "유의사항"
+    }
+    
+    let notice = UILabel().then {
+        $0.textColor = .lightGray
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        $0.numberOfLines = 0
+        $0.lineBreakMode = .byWordWrapping
+        $0.textAlignment = .left
+    }
+    
     let buyButton = UIButton().then {
         $0.backgroundColor = .yellow
         $0.setTitle("교환하기", for: .normal)
@@ -60,6 +81,7 @@ final class ShopDetailView: UIView {
         
         addView()
         setLayout()
+        setScroll()
     }
     
     required init?(coder: NSCoder) {
@@ -68,12 +90,14 @@ final class ShopDetailView: UIView {
     
     // MARK:  - Add View
     private func addView() {
-        [background, brandLabel, productLabel, priceLabel, buyButton].forEach { self.addSubview($0) }
+        [scrollView, background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice, buyButton].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        let gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = background.bounds
         
@@ -89,9 +113,19 @@ final class ShopDetailView: UIView {
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         
         background.layer.addSublayer(gradientLayer)
+        
+        buyButton.layer.masksToBounds = true
+        buyButton.layer.cornerRadius = 10
+        
+        notice.setLineSpacing(spacing: 4)
     }
     
     private func setLayout() {
+        scrollView.snp.makeConstraints {
+            $0.top.bottom.equalTo(self.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+        }
+        
         background.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.top.equalToSuperview().inset(97)
@@ -99,10 +133,10 @@ final class ShopDetailView: UIView {
         }
         
         productImage.snp.makeConstraints {
-            $0.top.equalTo(background.snp.top).offset(61.27)
-            $0.bottom.equalTo(background.snp.bottom).offset(-61.54)
-            $0.leading.equalTo(background.snp.leading).offset(102)
-            $0.trailing.equalTo(background.snp.trailing).offset(-102)
+            $0.top.equalTo(background.snp.top).offset(27)
+            $0.bottom.equalTo(background.snp.bottom).offset(-27)
+            $0.leading.equalTo(background.snp.leading).offset(16)
+            $0.trailing.equalTo(background.snp.trailing).offset(-16)
         }
         
         brandLabel.snp.makeConstraints {
@@ -120,13 +154,41 @@ final class ShopDetailView: UIView {
             $0.top.equalTo(productLabel.snp.bottom).offset(23)
         }
         
+        divLine.snp.makeConstraints {
+            $0.height.equalTo(0.5)
+            $0.top.equalTo(priceLabel.snp.bottom).offset(22)
+            $0.leading.trailing.equalToSuperview().inset(25)
+        }
+        
+        noticeLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(30)
+            $0.top.equalTo(divLine.snp.bottom).offset(17)
+        }
+        
+        notice.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(30)
+            $0.top.equalTo(noticeLabel.snp.bottom).offset(6)
+            $0.width.equalTo(340)
+        }
+        
         buyButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.bottom.equalToSuperview().inset(33)
             $0.height.equalTo(57)
         }
+    }
+    
+    func setScroll() {
+        let totalHeight = background.frame.height +
+                         brandLabel.frame.height +
+                         productLabel.frame.height +
+                         priceLabel.frame.height +
+                         divLine.frame.height +
+                         noticeLabel.frame.height +
+                         notice.frame.height +
+                         buyButton.frame.height
         
-        
+        scrollView.contentSize = CGSize(width: self.bounds.width, height: totalHeight)
     }
 
 }
