@@ -18,6 +18,9 @@
 		8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352A2AA9ED250086B90C /* TagDetailView.swift */; };
 		8432352D2AAC560A0086B90C /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */; };
 		8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432352E2AAC57AF0086B90C /* ShopDetailView.swift */; };
+		843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843235442AAD672A0086B90C /* CoreDataManager.swift */; };
+		843235492AAD6A3C0086B90C /* Me+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843235472AAD6A3C0086B90C /* Me+CoreDataClass.swift */; };
+		8432354A2AAD6A3C0086B90C /* Me+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843235482AAD6A3C0086B90C /* Me+CoreDataProperties.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		8432352A2AA9ED250086B90C /* TagDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailView.swift; sourceTree = "<group>"; };
 		8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		8432352E2AAC57AF0086B90C /* ShopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
+		843235442AAD672A0086B90C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		843235472AAD6A3C0086B90C /* Me+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Me+CoreDataClass.swift"; sourceTree = "<group>"; };
+		843235482AAD6A3C0086B90C /* Me+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Me+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,16 @@
 				840A5B722AA0A5930016BD0B /* TagDataManager.swift */,
 			);
 			path = Tag;
+			sourceTree = "<group>";
+		};
+		843235462AAD67430086B90C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				843235472AAD6A3C0086B90C /* Me+CoreDataClass.swift */,
+				843235482AAD6A3C0086B90C /* Me+CoreDataProperties.swift */,
+				843235442AAD672A0086B90C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		8447E5142A820A1E00EDCE22 = {
@@ -227,6 +243,7 @@
 		8457A80A2A872E130009150D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				843235462AAD67430086B90C /* CoreData */,
 				843235272AA9E0560086B90C /* Tag */,
 				843235262AA9E04A0086B90C /* Shop */,
 				843235252AA9E03F0086B90C /* Exercise */,
@@ -343,9 +360,12 @@
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
 				840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */,
+				8432354A2AAD6A3C0086B90C /* Me+CoreDataProperties.swift in Sources */,
 				840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */,
+				843235492AAD6A3C0086B90C /* Me+CoreDataClass.swift in Sources */,
 				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
+				843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */,
 				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
 				8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,

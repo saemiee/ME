@@ -81,7 +81,6 @@ final class ShopDetailView: UIView {
         
         addView()
         setLayout()
-        setScroll()
     }
     
     required init?(coder: NSCoder) {
@@ -178,17 +177,4 @@ final class ShopDetailView: UIView {
         }
     }
     
-    func setScroll() {
-        let totalHeight = background.frame.height +
-                         brandLabel.frame.height +
-                         productLabel.frame.height +
-                         priceLabel.frame.height +
-                         divLine.frame.height +
-                         noticeLabel.frame.height +
-                         notice.frame.height +
-                         buyButton.frame.height
-        
-        scrollView.contentSize = CGSize(width: self.bounds.width, height: totalHeight)
-    }
-
 }

@@ -70,7 +70,7 @@ final class TagDetailView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffect = UIBlurEffect(style: .dark)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = self.frame
         self.background.addSubview(visualEffectView)

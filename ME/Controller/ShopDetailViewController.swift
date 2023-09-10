@@ -25,6 +25,7 @@ final class ShopDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setData()
+        setupButtonAction()
     }
     
     // MARK: - Data Setting
@@ -39,7 +40,7 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Buy Button Tapped
     @objc func buyButtonTapped() {
-        print("Tapped")
+        dismiss(animated: true)
     }
     
 }
