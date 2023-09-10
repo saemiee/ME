@@ -24,6 +24,8 @@ final class ShopDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .background
+        
         setData()
         setupButtonAction()
     }
@@ -40,7 +42,19 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Buy Button Tapped
     @objc func buyButtonTapped() {
-        dismiss(animated: true)
+        buyFailed()
+        
+    }
+    
+    // MARK: - Bay seccess
+    func buySuccess() {
+        
+    }
+    
+    // MARK: - Bay failed
+    func buyFailed() {
+        let failedPopup = BuyFailedViewController()
+        present(failedPopup, animated: true)
     }
     
 }

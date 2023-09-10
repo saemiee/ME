@@ -96,6 +96,8 @@ final class ShopDetailView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        backgroundColor = .background
+        
         let gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = background.bounds
@@ -172,7 +174,7 @@ final class ShopDetailView: UIView {
         
         buyButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(30)
-            $0.bottom.equalToSuperview().inset(33)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-28)
             $0.height.equalTo(57)
         }
     }
