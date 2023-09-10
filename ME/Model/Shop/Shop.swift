@@ -12,4 +12,5 @@ struct Shop {
     let brandName: String
     let productName: String
     let price: Int
+    let notice: String
 }
