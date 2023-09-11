@@ -22,11 +22,7 @@ final class ShopDetailView: UIView {
             notice.text = product.notice
         }
     }
-    
-    let scrollView = UIScrollView().then {
-        $0.isScrollEnabled = true
-    }
-    
+
     let background = UIView().then {
         $0.backgroundColor = .gray
         $0.layer.cornerRadius = 10
@@ -51,7 +47,7 @@ final class ShopDetailView: UIView {
     }
     
     let divLine = UIView().then {
-        $0.backgroundColor = .lightGray
+        $0.backgroundColor = .gray
     }
     
     let noticeLabel = UILabel().then {
@@ -89,7 +85,7 @@ final class ShopDetailView: UIView {
     
     // MARK:  - Add View
     private func addView() {
-        [scrollView, background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice, buyButton].forEach { self.addSubview($0) }
+        [background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice, buyButton].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
@@ -122,11 +118,6 @@ final class ShopDetailView: UIView {
     }
     
     private func setLayout() {
-        scrollView.snp.makeConstraints {
-            $0.top.bottom.equalTo(self.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview()
-        }
-        
         background.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.top.equalToSuperview().inset(97)
@@ -157,13 +148,13 @@ final class ShopDetailView: UIView {
         
         divLine.snp.makeConstraints {
             $0.height.equalTo(0.5)
-            $0.top.equalTo(priceLabel.snp.bottom).offset(22)
+            $0.top.equalTo(priceLabel.snp.bottom).offset(19)
             $0.leading.trailing.equalToSuperview().inset(25)
         }
         
         noticeLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(30)
-            $0.top.equalTo(divLine.snp.bottom).offset(17)
+            $0.top.equalTo(divLine.snp.bottom).offset(19)
         }
         
         notice.snp.makeConstraints {

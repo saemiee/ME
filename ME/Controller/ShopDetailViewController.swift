@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Then
 
 final class ShopDetailViewController: UIViewController {
     
@@ -53,9 +52,12 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Bay failed
     func buyFailed() {
-        let failedPopup = BuyFailedViewController()
-        present(failedPopup, animated: true)
+//        let failedPopup = BuyFailedViewController()
+//        present(failedPopup, animated: true)
+        dismiss(animated: true)
     }
+    
+    
     
 }
     
