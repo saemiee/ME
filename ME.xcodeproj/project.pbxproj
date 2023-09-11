@@ -21,6 +21,8 @@
 		843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843235442AAD672A0086B90C /* CoreDataManager.swift */; };
 		8432354C2AAD81B80086B90C /* BuyFailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */; };
 		8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */; };
+		843536982AAF3A30008EF27E /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536972AAF3A30008EF27E /* CheckButton.swift */; };
+		8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536992AAF3BC0008EF27E /* BuyButton.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		843235442AAD672A0086B90C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFailedViewController.swift; sourceTree = "<group>"; };
 		8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFailedPopupView.swift; sourceTree = "<group>"; };
+		843536972AAF3A30008EF27E /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		843536992AAF3BC0008EF27E /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		843536962AAF39EF008EF27E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				843536972AAF3A30008EF27E /* CheckButton.swift */,
+				843536992AAF3BC0008EF27E /* BuyButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		8447E5142A820A1E00EDCE22 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				843536962AAF39EF008EF27E /* Button */,
 				84766D822AA4524100696B8A /* Cell */,
 				8457A8532A8E13BD0009150D /* HomeView */,
 				8447E5DD2A84F22600EDCE22 /* Onboarding */,
@@ -364,12 +378,14 @@
 				8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */,
 				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
+				843536982AAF3A30008EF27E /* CheckButton.swift in Sources */,
 				843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */,
 				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
 				8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
 				847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */,
+				8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */,
 				84766D812AA4509700696B8A /* Constants.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,

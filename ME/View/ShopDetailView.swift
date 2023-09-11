@@ -64,12 +64,7 @@ final class ShopDetailView: UIView {
         $0.textAlignment = .left
     }
     
-    let buyButton = UIButton().then {
-        $0.backgroundColor = .yellow
-        $0.setTitle("교환하기", for: .normal)
-        $0.setTitleColor(UIColor.black, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-    }
+    let buyButton = BuyButton()
     
     // MARK: - init
     override init(frame: CGRect) {

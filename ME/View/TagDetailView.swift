@@ -40,14 +40,7 @@ final class TagDetailView: UIView {
     
     let tagImage = UIImageView()
     
-    let checkButton = UIButton().then {
-        $0.layer.cornerRadius = 10
-        $0.clipsToBounds = true
-        $0.setTitle("확인", for: .normal)
-        $0.setTitleColor(UIColor.black, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        $0.backgroundColor = .yellow
-    }
+    let checkButton = CheckButton()
     
     // MARK: - init
     override init(frame: CGRect) {
