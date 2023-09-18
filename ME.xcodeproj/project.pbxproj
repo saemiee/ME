@@ -23,6 +23,8 @@
 		8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */; };
 		843536982AAF3A30008EF27E /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536972AAF3A30008EF27E /* CheckButton.swift */; };
 		8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536992AAF3BC0008EF27E /* BuyButton.swift */; };
+		843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A02AB6F8B0008EF27E /* ActivityRingView.swift */; };
+		843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A32AB6FB0A008EF27E /* HealthKitManager.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 		8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFailedPopupView.swift; sourceTree = "<group>"; };
 		843536972AAF3A30008EF27E /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		843536992AAF3BC0008EF27E /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
+		843536A02AB6F8B0008EF27E /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		843536A32AB6FB0A008EF27E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		843536A22AB6FA25008EF27E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				843536A32AB6FB0A008EF27E /* HealthKitManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8447E5142A820A1E00EDCE22 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 				8447E5412A82150E00EDCE22 /* Extension */,
 				8447E53E2A82112F00EDCE22 /* Resources */,
 				8457A80A2A872E130009150D /* Model */,
+				843536A22AB6FA25008EF27E /* ViewModel */,
 				8447E5442A821BC500EDCE22 /* View */,
 				8447E5A72A826E1200EDCE22 /* Controller */,
 				8447E52C2A820A1F00EDCE22 /* Assets.xcassets */,
@@ -221,6 +234,7 @@
 				8432352A2AA9ED250086B90C /* TagDetailView.swift */,
 				8432352E2AAC57AF0086B90C /* ShopDetailView.swift */,
 				8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */,
+				843536A02AB6F8B0008EF27E /* ActivityRingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +411,8 @@
 				8457A8552A8E13DC0009150D /* MyView.swift in Sources */,
 				840A5B6F2AA0A4A80016BD0B /* TagCollectionViewCell.swift in Sources */,
 				840A5B732AA0A5930016BD0B /* TagDataManager.swift in Sources */,
+				843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */,
+				843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */,
 				8432354C2AAD81B80086B90C /* BuyFailedViewController.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
