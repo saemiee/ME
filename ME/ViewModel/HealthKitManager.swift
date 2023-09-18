@@ -24,7 +24,7 @@ class HealthKitManager {
         if !HKHealthStore.isHealthDataAvailable() {
             requestAuthorization()
         } else {
-            
+            readData()
         }
     }
     
@@ -42,5 +42,33 @@ class HealthKitManager {
             }
         }
     }
-
+    
+    // MARK: - Read Workout Data
+    func readData(){
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let workoutType = HKObjectType.workoutType()
+        
+        let query = HKSampleQuery(sampleType: workoutType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { query, samples, error in
+            if let workoutSamples = samples as? [HKWorkout] {
+                var kcalByWorkoutType: [HKWorkoutActivityType: Double] = [:]
+                
+                for workout in workoutSamples {
+                    let activityType = workout.workoutActivityType
+                    
+                    if let kcalBurned = workout.totalEnergyBurned?.doubleValue(for: HKUnit.kilocalorie()) {
+                        kcalByWorkoutType[activityType] = (kcalByWorkoutType[activityType] ?? 0) + kcalBurned
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    print("")
+                }
+            }
+        }
+        self.healthStore.execute(query)
+    }
+    
 }
