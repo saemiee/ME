@@ -12,13 +12,13 @@ import Then
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
-    private let my = UIButton().then {
-        $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34)), for: .normal)
-        $0.tintColor = .yellow
-        $0.backgroundColor = .clear
-        $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
-        $0.addTarget(self, action: #selector(myTapped), for: .touchUpInside)
-    }
+//    private let my = UIButton().then {
+//        $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34)), for: .normal)
+//        $0.tintColor = .yellow
+//        $0.backgroundColor = .clear
+//        $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
+//        $0.addTarget(self, action: #selector(myTapped), for: .touchUpInside)
+//    }
     
     private let myLabel = UILabel().then {
         $0.text = "MY"
@@ -72,23 +72,30 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .background
+        setNavigation()
         addView()
         setLayout()
+    }
+    
+    private func setNavigation() {
+        let myButton = MyButton(target: self, action: #selector(myTapped))
+        
+        navigationItem.rightBarButtonItem = myButton
     }
     
     // MARK: - Add View
     private func addView() {
         [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
-        [my, myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
+        [myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
     // MARK: - Layout
     private func setLayout() {
-        my.snp.makeConstraints {
-            $0.width.height.equalTo(32)
-            $0.top.equalToSuperview().inset(110)
-            $0.trailing.equalToSuperview().inset(20)
-        }
+//        my.snp.makeConstraints {
+//            $0.width.height.equalTo(32)
+//            $0.top.equalToSuperview().inset(110)
+//            $0.trailing.equalToSuperview().inset(20)
+//        }
         
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
@@ -169,7 +176,8 @@ final class HomeViewController: UIViewController {
     // MARK: - MyButton Action
     @objc func myTapped() {
         let myVC = MyViewController()
-        navigationController?.pushViewController(myVC, animated: true)
+        myVC.modalPresentationStyle = .automatic
+        present(myVC, animated: true)
     }
     
     // MARK: - MoreButton Action

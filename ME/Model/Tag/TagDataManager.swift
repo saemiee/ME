@@ -16,7 +16,7 @@ final class TagDataManager {
             Tag(tagImage: UIImage(named: "welcome"), tagName: "WELCOME!",tagDescription: "ME에 오신걸 환영해요.\n앞으로 ME와 함께 건강한 삶을 만들어가요!"),
             Tag(tagImage: UIImage(named: "pool"), tagName: "수영왕",tagDescription: "물 만난 물고기 🐟"),
             Tag(tagImage: UIImage(named: "dance"), tagName: "댄싱머신",tagDescription: "둠칫둠칫 Best Dancer!"),
-            Tag(tagImage: UIImage(named: "creditCard"), tagName: "결제담당", tagDescription: "ME에서 획든한 포인트로 5번 이상\n상품을 구매하셨네요!"),
+            Tag(tagImage: UIImage(named: "creditCard"), tagName: "결제담당", tagDescription: "ME에서 획득한 포인트로 5번 이상\n상품을 구매하셨네요!"),
             Tag(tagImage: UIImage(named: "rerb"), tagName: "자연인", tagDescription: "맑은 공기가 가득한 자연 속에서\n즐기는 하이킹!"),
             Tag(tagImage: UIImage(named: "run"), tagName: "리틀 우사인볼트", tagDescription: "달려라 달려!"),
             Tag(tagImage: UIImage(named: "chocolate"), tagName: "초콜릿 복근", tagDescription: "코어 트레이닝을 열심히 하셨네요.\n초콜릿 복근이 생기는 그날까지 화이팅!"),

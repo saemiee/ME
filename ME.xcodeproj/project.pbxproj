@@ -25,6 +25,7 @@
 		8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536992AAF3BC0008EF27E /* BuyButton.swift */; };
 		843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A02AB6F8B0008EF27E /* ActivityRingView.swift */; };
 		843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A32AB6FB0A008EF27E /* HealthKitManager.swift */; };
+		843536A82AB96365008EF27E /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A72AB96365008EF27E /* MyButton.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -75,6 +76,7 @@
 		843536992AAF3BC0008EF27E /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		843536A02AB6F8B0008EF27E /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		843536A32AB6FB0A008EF27E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		843536A72AB96365008EF27E /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				843536972AAF3A30008EF27E /* CheckButton.swift */,
 				843536992AAF3BC0008EF27E /* BuyButton.swift */,
+				843536A72AB96365008EF27E /* MyButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				843536982AAF3A30008EF27E /* CheckButton.swift in Sources */,
 				843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */,
 				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
+				843536A82AB96365008EF27E /* MyButton.swift in Sources */,
 				8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,

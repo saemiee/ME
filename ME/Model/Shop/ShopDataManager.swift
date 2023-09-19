@@ -24,7 +24,7 @@ final class ShopDataManager {
     
     func makeShopData() {
         shopDataArray = [
-            Shop(productImage: UIImage(named: "iceBox"), brandName: "스타벅스", productName: "아이스 아메리카노 T", price: 1, notice: starbucksNotice),
+            Shop(productImage: UIImage(named: "americano"), brandName: "스타벅스", productName: "아이스 아메리카노 T", price: 1, notice: starbucksNotice),
             Shop(productImage: UIImage(named: "icedCafeLatte"), brandName: "스타벅스", productName: "아이스 카페 라떼 T", price: 1, notice: starbucksNotice),
             Shop(productImage: UIImage(named: "caramelMacchiato"), brandName: "스타벅스", productName: "아이스 카라멜 마키아또 T", price: 1, notice: starbucksNotice),
             Shop(productImage: UIImage(named: "coldBrew"), brandName: "스타벅스", productName: "아이스 콜드 브루 T", price: 1, notice: starbucksNotice),

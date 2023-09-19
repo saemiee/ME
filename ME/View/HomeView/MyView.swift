@@ -73,6 +73,8 @@ final class MyView: UIView {
         $0.spacing = 2
     }
     
+    let activityRing = ActivityRingView()
+    
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -103,7 +105,7 @@ final class MyView: UIView {
         
         [amountOfActivityStackView, pointStackView, bestExercisesStackView].forEach { stackView.addArrangedSubview($0) }
         
-        self.addSubview(stackView)
+        [stackView, activityRing].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
@@ -135,6 +137,12 @@ final class MyView: UIView {
         stackView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(17)
             $0.leading.equalToSuperview().inset(16)
+        }
+        
+        activityRing.snp.makeConstraints {
+            $0.width.height.equalTo(130)
+            $0.trailing.equalToSuperview().inset(40)
+            $0.centerY.equalToSuperview()
         }
     }
 }
