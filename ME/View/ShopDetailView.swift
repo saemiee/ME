@@ -64,8 +64,6 @@ final class ShopDetailView: UIView {
         $0.textAlignment = .left
     }
     
-    let buyButton = BuyButton()
-    
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -80,7 +78,7 @@ final class ShopDetailView: UIView {
     
     // MARK:  - Add View
     private func addView() {
-        [background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice, buyButton].forEach { self.addSubview($0) }
+        [background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice].forEach { self.addSubview($0) }
     }
     
     // MARK: - Layout
@@ -106,16 +104,13 @@ final class ShopDetailView: UIView {
         
         background.layer.addSublayer(gradientLayer)
         
-        buyButton.layer.masksToBounds = true
-        buyButton.layer.cornerRadius = 10
-        
         notice.setLineSpacing(spacing: 4)
     }
     
     private func setLayout() {
         background.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(30)
-            $0.top.equalToSuperview().inset(97)
+            $0.top.equalToSuperview().inset(40)
             $0.height.equalTo(338.78)
         }
         
@@ -156,12 +151,6 @@ final class ShopDetailView: UIView {
             $0.leading.equalToSuperview().inset(30)
             $0.top.equalTo(noticeLabel.snp.bottom).offset(6)
             $0.width.equalTo(340)
-        }
-        
-        buyButton.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(30)
-            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-28)
-            $0.height.equalTo(57)
         }
     }
     

@@ -116,6 +116,7 @@ extension ShopViewController: UICollectionViewDelegate {
         
         detailVC.product = currentItem
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        detailVC.modalPresentationStyle = .automatic
+        present(detailVC, animated: true)
     }
 }

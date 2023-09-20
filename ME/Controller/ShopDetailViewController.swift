@@ -15,6 +15,8 @@ final class ShopDetailViewController: UIViewController {
     
     var product: Shop?
     
+    let buyButton = MECustomButton(frame: CGRect(x: 0, y: 0, width: 0, height: 57), title: "교환하기")
+    
     override func loadView() {
         view = detailView
     }
@@ -26,7 +28,7 @@ final class ShopDetailViewController: UIViewController {
         view.backgroundColor = .background
         
         setData()
-        setupButtonAction()
+        setupButton()
     }
     
     // MARK: - Data Setting
@@ -34,11 +36,18 @@ final class ShopDetailViewController: UIViewController {
         detailView.product = product
     }
     
-    // MARK: - Button Action
-    func setupButtonAction() {
-        detailView.buyButton.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+    func setupButton() {
+        view.addSubview(buyButton)
+        
+        buyButton.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+        
+        buyButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(30)
+            $0.height.equalTo(57)
+            $0.bottom.equalToSuperview().inset(57)
+        }
     }
-    
+
     // MARK: - Buy Button Tapped
     @objc func buyButtonTapped() {
         buyFailed()
@@ -52,8 +61,6 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Bay failed
     func buyFailed() {
-//        let failedPopup = BuyFailedViewController()
-//        present(failedPopup, animated: true)
         dismiss(animated: true)
     }
     

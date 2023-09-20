@@ -11,10 +11,10 @@ import Then
 final class MyButton: UIBarButtonItem {
     
     convenience init(target: Any?, action: Selector) {
-        let buttonSize = CGSize(width: 32, height: 32)
+        let buttonSize = CGSize(width: 20, height: 20)
         
         let myButton = UIButton(type: .system).then {
-            $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)), for: .normal)
+            $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20)), for: .normal)
             $0.tintColor = .yellow
             $0.backgroundColor = .clear
             $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)

@@ -21,8 +21,7 @@
 		843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843235442AAD672A0086B90C /* CoreDataManager.swift */; };
 		8432354C2AAD81B80086B90C /* BuyFailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */; };
 		8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */; };
-		843536982AAF3A30008EF27E /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536972AAF3A30008EF27E /* CheckButton.swift */; };
-		8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536992AAF3BC0008EF27E /* BuyButton.swift */; };
+		8435369A2AAF3BC0008EF27E /* MECustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536992AAF3BC0008EF27E /* MECustomButton.swift */; };
 		843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A02AB6F8B0008EF27E /* ActivityRingView.swift */; };
 		843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A32AB6FB0A008EF27E /* HealthKitManager.swift */; };
 		843536A82AB96365008EF27E /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A72AB96365008EF27E /* MyButton.swift */; };
@@ -72,8 +71,7 @@
 		843235442AAD672A0086B90C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFailedViewController.swift; sourceTree = "<group>"; };
 		8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFailedPopupView.swift; sourceTree = "<group>"; };
-		843536972AAF3A30008EF27E /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
-		843536992AAF3BC0008EF27E /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
+		843536992AAF3BC0008EF27E /* MECustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MECustomButton.swift; sourceTree = "<group>"; };
 		843536A02AB6F8B0008EF27E /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		843536A32AB6FB0A008EF27E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		843536A72AB96365008EF27E /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
@@ -158,8 +156,7 @@
 		843536962AAF39EF008EF27E /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				843536972AAF3A30008EF27E /* CheckButton.swift */,
-				843536992AAF3BC0008EF27E /* BuyButton.swift */,
+				843536992AAF3BC0008EF27E /* MECustomButton.swift */,
 				843536A72AB96365008EF27E /* MyButton.swift */,
 			);
 			path = Button;
@@ -395,7 +392,6 @@
 				8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */,
 				8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */,
 				8457A80E2A872F9B0009150D /* ExerciseDataManager.swift in Sources */,
-				843536982AAF3A30008EF27E /* CheckButton.swift in Sources */,
 				843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */,
 				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
 				843536A82AB96365008EF27E /* MyButton.swift in Sources */,
@@ -403,7 +399,7 @@
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,
 				847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */,
-				8435369A2AAF3BC0008EF27E /* BuyButton.swift in Sources */,
+				8435369A2AAF3BC0008EF27E /* MECustomButton.swift in Sources */,
 				84766D812AA4509700696B8A /* Constants.swift in Sources */,
 				8447E5512A822CE000EDCE22 /* Onboarding3.swift in Sources */,
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,

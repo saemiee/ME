@@ -40,7 +40,7 @@ final class TagDetailView: UIView {
     
     let tagImage = UIImageView()
     
-    let checkButton = CheckButton()
+    let checkButton = MECustomButton(frame: CGRect(x: 0, y: 0, width: 0, height: 57), title: "확인")
     
     // MARK: - init
     override init(frame: CGRect) {

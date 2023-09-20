@@ -41,7 +41,6 @@ final class TagDetailViewController: UIViewController {
     // MARK: - check Button Tapped
     @objc func chekButtonTapped() {
         dismiss(animated: true)
-        print("Tapped")
     }
     
 }

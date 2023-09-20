@@ -12,14 +12,6 @@ import Then
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
-//    private let my = UIButton().then {
-//        $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34)), for: .normal)
-//        $0.tintColor = .yellow
-//        $0.backgroundColor = .clear
-//        $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
-//        $0.addTarget(self, action: #selector(myTapped), for: .touchUpInside)
-//    }
-    
     private let myLabel = UILabel().then {
         $0.text = "MY"
         $0.textColor = .white
@@ -72,12 +64,13 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .background
-        setNavigation()
+        setNavigationButton()
         addView()
         setLayout()
     }
     
-    private func setNavigation() {
+    // MARK: - Setting NavigationItem
+    private func setNavigationButton() {
         let myButton = MyButton(target: self, action: #selector(myTapped))
         
         navigationItem.rightBarButtonItem = myButton
@@ -91,12 +84,6 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Layout
     private func setLayout() {
-//        my.snp.makeConstraints {
-//            $0.width.height.equalTo(32)
-//            $0.top.equalToSuperview().inset(110)
-//            $0.trailing.equalToSuperview().inset(20)
-//        }
-        
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
             $0.leading.equalToSuperview().inset(20)
