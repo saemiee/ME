@@ -8,7 +8,6 @@
 import UIKit
 
 extension UILabel {
-    
     func setLineSpacing(spacing: CGFloat) {
         guard let text = text else { return }
 
@@ -18,6 +17,5 @@ extension UILabel {
         attributeString.addAttribute(.paragraphStyle, value: style, range: NSRange(location: 0, length: attributeString.length))
         attributedText = attributeString
     }
-
 }
 

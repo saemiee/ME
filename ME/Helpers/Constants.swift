@@ -14,6 +14,7 @@ public enum Cell {
     static let tagCellIdentifier = "TagCell"
 }
 
+// MARK: - Cell
 public enum exerciseCell {
     static let cellWidth: CGFloat = 350
     static let cellHeith: CGFloat = 66

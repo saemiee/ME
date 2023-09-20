@@ -38,6 +38,6 @@ final class TagDataManager {
             return tagDataArray[index]
         }
     }
-    
+
 }
 

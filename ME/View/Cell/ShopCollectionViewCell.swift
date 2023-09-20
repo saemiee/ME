@@ -11,11 +11,7 @@ import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
-    let background = UIView().then {
-        $0.backgroundColor = .gray
-        $0.layer.cornerRadius = 10
-        $0.layer.masksToBounds = true
-    }
+    let background = VignettingView()
 
     let productImage = UIImageView()
     
@@ -54,27 +50,6 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Layout
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = background.bounds
-        
-        let colors: [CGColor] = [
-            .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1),
-            .init(red: 0.225, green: 0.225, blue: 0.225, alpha: 1),
-            .init(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        ]
-        gradientLayer.colors = colors
-        
-        gradientLayer.type = .radial
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        
-        background.layer.addSublayer(gradientLayer)
-    }
-    
     func setLayout() {
         background.snp.makeConstraints {
             $0.width.equalTo(166)
@@ -82,7 +57,7 @@ final class ShopCollectionViewCell: UICollectionViewCell {
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
-
+        
         productImage.snp.makeConstraints {
             $0.top.equalTo(background.snp.top).offset(27)
             $0.bottom.equalTo(background.snp.bottom).offset(-27)

@@ -25,6 +25,10 @@
 		843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A02AB6F8B0008EF27E /* ActivityRingView.swift */; };
 		843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A32AB6FB0A008EF27E /* HealthKitManager.swift */; };
 		843536A82AB96365008EF27E /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A72AB96365008EF27E /* MyButton.swift */; };
+		843536AA2ABAB5A7008EF27E /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A92ABAB5A7008EF27E /* TagViewModel.swift */; };
+		843536AC2ABAB5BF008EF27E /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */; };
+		843536AE2ABAB5EC008EF27E /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */; };
+		843536B02ABAB7ED008EF27E /* VignettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AF2ABAB7ED008EF27E /* VignettingView.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -75,6 +79,10 @@
 		843536A02AB6F8B0008EF27E /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		843536A32AB6FB0A008EF27E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		843536A72AB96365008EF27E /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		843536A92ABAB5A7008EF27E /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
+		843536AF2ABAB7ED008EF27E /* VignettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignettingView.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				843536A32AB6FB0A008EF27E /* HealthKitManager.swift */,
+				843536A92ABAB5A7008EF27E /* TagViewModel.swift */,
+				843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */,
+				843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 				8432352E2AAC57AF0086B90C /* ShopDetailView.swift */,
 				8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */,
 				843536A02AB6F8B0008EF27E /* ActivityRingView.swift */,
+				843536AF2ABAB7ED008EF27E /* VignettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +417,8 @@
 				8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */,
 				8457A8492A8B72C30009150D /* HomeViewController.swift in Sources */,
 				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
+				843536AC2ABAB5BF008EF27E /* ShopViewModel.swift in Sources */,
+				843536AE2ABAB5EC008EF27E /* ExerciseViewModel.swift in Sources */,
 				840A5B622A99E9480016BD0B /* MyViewController.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
@@ -414,9 +428,11 @@
 				843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */,
 				843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */,
 				8432354C2AAD81B80086B90C /* BuyFailedViewController.swift in Sources */,
+				843536AA2ABAB5A7008EF27E /* TagViewModel.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,
+				843536B02ABAB7ED008EF27E /* VignettingView.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,

@@ -18,13 +18,4 @@ final class CoreDataManager {
     lazy var context = appDelegate?.persistentContainer.viewContext
     
     let modelName: String = "Me"
-    
-    // MARK: - Get Data
-    
-    
-    // MARK: -
-
-
-    
-
 }

@@ -23,11 +23,7 @@ final class ShopDetailView: UIView {
         }
     }
 
-    let background = UIView().then {
-        $0.backgroundColor = .gray
-        $0.layer.cornerRadius = 10
-        $0.layer.masksToBounds = true
-    }
+    private let background = VignettingView()
     
     let productImage = UIImageView()
     
@@ -46,11 +42,11 @@ final class ShopDetailView: UIView {
         $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     }
     
-    let divLine = UIView().then {
+    private let divLine = UIView().then {
         $0.backgroundColor = .gray
     }
     
-    let noticeLabel = UILabel().then {
+    private let noticeLabel = UILabel().then {
         $0.textColor = .lightGray
         $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         $0.text = "유의사항"
@@ -86,24 +82,6 @@ final class ShopDetailView: UIView {
         super.layoutSubviews()
         
         backgroundColor = .background
-        
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = background.bounds
-        
-        let colors: [CGColor] = [
-            .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1),
-            .init(red: 0.225, green: 0.225, blue: 0.225, alpha: 1),
-            .init(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        ]
-        gradientLayer.colors = colors
-        
-        gradientLayer.type = .radial
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        
-        background.layer.addSublayer(gradientLayer)
-        
         notice.setLineSpacing(spacing: 4)
     }
     
@@ -153,5 +131,5 @@ final class ShopDetailView: UIView {
             $0.width.equalTo(340)
         }
     }
-    
+
 }
