@@ -51,7 +51,6 @@ final class ShopDetailViewController: UIViewController {
     // MARK: - Buy Button Tapped
     @objc func buyButtonTapped() {
         buyFailed()
-        
     }
     
     // MARK: - Bay seccess
@@ -61,10 +60,11 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Bay failed
     func buyFailed() {
-        dismiss(animated: true)
+        let failedVC = BuyFailedViewController()
+        
+        failedVC.modalPresentationStyle = .overFullScreen
+        present(failedVC, animated: false)
     }
-    
-    
     
 }
     

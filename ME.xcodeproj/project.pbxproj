@@ -31,6 +31,7 @@
 		843536B02ABAB7ED008EF27E /* VignettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AF2ABAB7ED008EF27E /* VignettingView.swift */; };
 		843536D92ABC3AAB008EF27E /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536D82ABC3AAB008EF27E /* PopupButton.swift */; };
 		843536DB2ABC3C8C008EF27E /* UIVeiw+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */; };
+		843536DD2ABC5FE2008EF27E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		843536AF2ABAB7ED008EF27E /* VignettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignettingView.swift; sourceTree = "<group>"; };
 		843536D82ABC3AAB008EF27E /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVeiw+Extension.swift"; sourceTree = "<group>"; };
+		843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				8447E5422A82152A00EDCE22 /* UIColor+Extension.swift */,
 				8447E5492A821E2000EDCE22 /* UILabel+Extension.swift */,
 				843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */,
+				843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
+				843536DD2ABC5FE2008EF27E /* UIButton+Extension.swift in Sources */,
 				840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */,
 				847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */,
 				8457A8452A8A31BA0009150D /* TagViewController.swift in Sources */,

@@ -11,27 +11,40 @@ import SnapKit
 final class BuyFailedViewController: UIViewController {
     
     let popupView = BuyFailedPopupView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setPopup()
+        
+        setup()
     }
     
-    func setPopup() {
+    // MARK: - Setting
+    private func setup() {
         self.view.backgroundColor = .black.withAlphaComponent(0.3)
         setLayout()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.dismiss(animated: false, completion: nil)
-        }
+        actionButton()
     }
-
-    func setLayout() {
+    
+    // MARK: - Layout
+    private func setLayout() {
         view.addSubview(popupView)
         
         popupView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.centerX.centerY.equalToSuperview()
+            $0.width.equalTo(278)
+            $0.height.equalTo(156)
         }
     }
-
+    
+    // MARK: - CheckButton Action
+    func actionButton() {
+        popupView.checkButton.addTarget(self, action: #selector(actionDismiss), for: .touchUpInside)
+    }
+    
+    @objc func actionDismiss() {
+        dismiss(animated: false)
+    }
+    
 }
+
+    
