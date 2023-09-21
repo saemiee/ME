@@ -12,21 +12,21 @@ import Then
 final class BuyFailedPopupView: UIView {
     
     private let popupView = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .gray
         $0.layer.cornerRadius = 10
         $0.clipsToBounds = true
     }
     
     private let mainLabel = UILabel().then {
         $0.text = "포인트가 부족합니다."
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        $0.textColor = .white
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
     }
     
     private let descriptionLabel = UILabel().then {
-        $0.text = "칼로리를 소모해 포인트를 적립해보세요.\n화이팅 ~ !!"
-        $0.textColor = .lightGray
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.text = "칼로리를 소모해 포인트를 적립하세요.\n아자잣 ~ !"
+        $0.textColor = .white
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         $0.textAlignment = .center
         $0.numberOfLines = 2
     }

@@ -18,7 +18,7 @@ final class ShopDetailView: UIView {
             productImage.image = product.productImage
             productLabel.text = product.productName
             brandLabel.text = product.brandName
-            priceLabel.text = String(product.price)
+            priceLabel.text = "\(product.price) p"
             notice.text = product.notice
         }
     }
