@@ -23,9 +23,9 @@ final class ShopDetailView: UIView {
         }
     }
 
-    let scrollView = UIScrollView()
+    private let scrollView = UIScrollView()
     
-    let background = VignettingView()
+    private let background = VignettingView()
     
     let productImage = UIImageView()
     
@@ -128,9 +128,10 @@ final class ShopDetailView: UIView {
         }
         
         divLine.snp.makeConstraints {
-            $0.height.equalTo(1)
-            $0.top.equalTo(priceLabel.snp.bottom).offset(19)
-            $0.leading.trailing.equalToSuperview().inset(25)
+            $0.width.equalTo(340)
+            $0.height.equalTo(0.5)
+            $0.top.equalTo(priceLabel.snp.bottom).offset(18)
+            $0.centerX.equalToSuperview()
         }
         
         noticeLabel.snp.makeConstraints {
