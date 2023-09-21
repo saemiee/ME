@@ -13,27 +13,27 @@ final class ExerciseCard: UIView {
     
     // MARK: - Properties
     private let exerciseImage = UIImageView().then {
-        $0.image = UIImage.init( systemName: "figure.open.water.swim", withConfiguration: UIImage.SymbolConfiguration(pointSize: 26))
+        $0.image = UIImage.init( systemName: "figure.open.water.swim", withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
         $0.tintColor = .yellow
     }
     
     private let exerciseLabel = UILabel().then {
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        $0.text = "걷기"
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        $0.text = "수영"
     }
     
     private let kcalLabel = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        $0.text = "100 Kcal"
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        $0.text = "1000 Kcal"
     }
     
     lazy var stackView = UIStackView().then {
         $0.axis = .vertical
         $0.distribution = .fill
         $0.alignment = .leading
-        $0.spacing = 0
+        $0.spacing = 7
     }
     
     // MARK: - init
@@ -42,7 +42,7 @@ final class ExerciseCard: UIView {
         
         backgroundColor = .gray
         
-        layer.cornerRadius = 7
+        layer.cornerRadius = 6
         layer.masksToBounds = true
         
         addView()
@@ -68,11 +68,11 @@ final class ExerciseCard: UIView {
         }
         
         exerciseLabel.snp.makeConstraints {
-            $0.height.equalTo(22)
+            $0.height.equalTo(12)
         }
         
         kcalLabel.snp.makeConstraints {
-            $0.height.equalTo(22)
+            $0.height.equalTo(12)
         }
         
         stackView.snp.makeConstraints {
