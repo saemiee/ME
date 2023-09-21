@@ -23,6 +23,8 @@ final class ShopDetailView: UIView {
         }
     }
 
+    let scrollView = UIScrollView()
+    
     let background = VignettingView()
     
     let productImage = UIImageView()
@@ -74,7 +76,9 @@ final class ShopDetailView: UIView {
     
     // MARK:  - Add View
     private func addView() {
-        [background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice].forEach { self.addSubview($0) }
+        [background, productImage, brandLabel, productLabel, priceLabel, divLine, noticeLabel, notice].forEach { self.scrollView.addSubview($0) }
+        
+        self.addSubview(scrollView)
     }
     
     // MARK: - Layout
@@ -83,13 +87,22 @@ final class ShopDetailView: UIView {
         
         backgroundColor = .background
         notice.setLineSpacing(spacing: 4)
+        
+        scrollView.contentSize = CGSize(
+                    width: UIScreen.main.bounds.width,
+                    height: notice.frame.maxY + 120
+                    )
     }
     
     private func setLayout() {
+        scrollView.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
         background.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(30)
             $0.top.equalToSuperview().inset(40)
-            $0.height.equalTo(338.78)
+            $0.centerX.equalToSuperview()
+            $0.width.height.equalTo(340)
         }
         
         productImage.snp.makeConstraints {
@@ -115,7 +128,7 @@ final class ShopDetailView: UIView {
         }
         
         divLine.snp.makeConstraints {
-            $0.height.equalTo(0.5)
+            $0.height.equalTo(1)
             $0.top.equalTo(priceLabel.snp.bottom).offset(19)
             $0.leading.trailing.equalToSuperview().inset(25)
         }
