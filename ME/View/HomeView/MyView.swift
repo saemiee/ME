@@ -20,7 +20,7 @@ final class MyView: UIView {
     
     private let amountOfActivity = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.text = "300 Kcal"
     }
     
@@ -38,7 +38,7 @@ final class MyView: UIView {
     
     private let point = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.text = "30 Point"
     }
     
@@ -56,7 +56,7 @@ final class MyView: UIView {
     
     private let bestExercises = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.text = "수영"
     }
     
@@ -68,9 +68,9 @@ final class MyView: UIView {
     
     private lazy var stackView = UIStackView().then {
         $0.axis = .vertical
-        $0.distribution = .fill
+        $0.distribution = .fillEqually
         $0.alignment = .leading
-        $0.spacing = 2
+        $0.spacing = 8
     }
     
     let activityRing = ActivityRingView().then {
@@ -112,32 +112,20 @@ final class MyView: UIView {
     
     // MARK: - Layout
     private func setLayout() {
-        amountOfActivityLabel.snp.makeConstraints {
-            $0.height.equalTo(22)
+        amountOfActivityStackView.snp.makeConstraints {
+            $0.height.equalTo(26)
         }
         
-        amountOfActivity.snp.makeConstraints {
-            $0.height.equalTo(22)
+        pointStackView.snp.makeConstraints {
+            $0.height.equalTo(26)
         }
         
-        pointLabel.snp.makeConstraints {
-            $0.height.equalTo(22)
-        }
-        
-        point.snp.makeConstraints {
-            $0.height.equalTo(22)
-        }
-        
-        bestExercisesLabel.snp.makeConstraints {
-            $0.height.equalTo(22)
-        }
-        
-        bestExercises.snp.makeConstraints {
-            $0.height.equalTo(22)
+        bestExercisesStackView.snp.makeConstraints {
+            $0.height.equalTo(26)
         }
         
         stackView.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(17)
+            $0.top.bottom.equalToSuperview().inset(20)
             $0.leading.equalToSuperview().inset(16)
         }
         
