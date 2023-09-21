@@ -73,7 +73,9 @@ final class MyView: UIView {
         $0.spacing = 2
     }
     
-    let activityRing = ActivityRingView()
+    let activityRing = ActivityRingView().then {
+        $0.backgroundColor = .clear
+    }
     
     // MARK: - init
     override init(frame: CGRect) {

@@ -10,38 +10,18 @@ import SnapKit
 
 final class ActivityRingView: UIView {
     
-    let circle = UIView()
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        backgroundColor = UIColor.lightOrange
-        setupCircle()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func layoutSubviews() {
-        self.layer.cornerRadius = self.frame.width / 2
-        self.layer.opacity = 0.3
-
-        circle.layer.cornerRadius = circle.frame.width / 2
-        circle.layer.opacity = 1
-    }
-
-    func setupCircle() {
-        circle.backgroundColor = .white
+    override func draw(_ rect: CGRect) {
+        let center = CGPoint(x: rect.midX, y: rect.midY)
         
-        circle.layer.opacity = 1
-
-        self.addSubview(circle)
-
-        circle.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
-            $0.width.height.equalTo(70)
-        }
+        let path = UIBezierPath(arcCenter: center, radius: 65, startAngle: 0, endAngle: (360 * .pi), clockwise: true)
+        let fillPath = UIColor.lightOrange.withAlphaComponent(0.3)
+        
+        fillPath.set()
+        path.fill()
+        
+        let semiCircle = UIBezierPath(arcCenter: center, radius: 40, startAngle: 0, endAngle: (360 * .pi), clockwise: true)
+        
+        UIColor.gray.set()
+        semiCircle.fill()
     }
-    
 }
