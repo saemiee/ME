@@ -23,7 +23,7 @@ final class ShopDetailView: UIView {
         }
     }
 
-    private let background = VignettingView()
+    let background = VignettingView()
     
     let productImage = UIImageView()
     

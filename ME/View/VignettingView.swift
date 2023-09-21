@@ -6,45 +6,41 @@
 //
 
 import UIKit
+import SwiftUI
+import SnapKit
+
+struct ContentView: View {
+        
+    var body: some View {
+        Rectangle()
+            .padding()
+            .blur(radius: 50, opaque: false)
+    }
+}
 
 final class VignettingView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    let backgroundView = UIHostingController(rootView: ContentView())
+
     override func layoutSubviews() {
         super.layoutSubviews()
         
         setupView()
     }
     
-    func setupView() {
-        backgroundColor = .gray
-        layer.cornerRadius = 10
-        layer.masksToBounds = true
+    private func setupView() {
+        self.backgroundColor = .gray
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 10
         
-        let gradientLayer = CAGradientLayer()
+        backgroundView.view.backgroundColor = .clear
         
-        gradientLayer.frame = bounds
+        addSubview(backgroundView.view)
         
-        let colors: [CGColor] = [
-            .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1),
-            .init(red: 0.24, green: 0.24, blue: 0.24, alpha: 1),
-            .init(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        ]
-        
-        gradientLayer.colors = colors
-        
-        gradientLayer.type = .radial
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        
-        self.layer.addSublayer(gradientLayer)
+        backgroundView.view.snp.makeConstraints {
+            $0.size.equalTo(CGSize(width: 86, height: 86))
+            $0.center.equalToSuperview()
+        }
     }
     
 }
