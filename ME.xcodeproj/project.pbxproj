@@ -33,6 +33,7 @@
 		843536DB2ABC3C8C008EF27E /* UIVeiw+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */; };
 		843536DD2ABC5FE2008EF27E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */; };
 		843536DF2ABC93CF008EF27E /* PayPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DE2ABC93CF008EF27E /* PayPopupView.swift */; };
+		843536E22ABD6933008EF27E /* PayPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536E12ABD6933008EF27E /* PayPopupViewController.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -91,6 +92,7 @@
 		843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVeiw+Extension.swift"; sourceTree = "<group>"; };
 		843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		843536DE2ABC93CF008EF27E /* PayPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPopupView.swift; sourceTree = "<group>"; };
+		843536E12ABD6933008EF27E /* PayPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPopupViewController.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 				840A5B612A99E9480016BD0B /* MyViewController.swift */,
 				8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */,
+				843536E12ABD6933008EF27E /* PayPopupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843536E22ABD6933008EF27E /* PayPopupViewController.swift in Sources */,
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
 				840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */,

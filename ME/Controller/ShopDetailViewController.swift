@@ -55,7 +55,10 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Bay seccess
     func buySuccess() {
+        let sucessVC = PayPopupViewController()
         
+        sucessVC.modalPresentationStyle = .overFullScreen
+        present(sucessVC, animated: false)
     }
     
     // MARK: - Bay failed

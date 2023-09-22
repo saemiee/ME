@@ -64,6 +64,8 @@ final class PayPopupView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setPopup()
     }
     
     required init?(coder: NSCoder) {
@@ -91,18 +93,18 @@ final class PayPopupView: UIView {
     // MARK: - Layout
     private func setLayout() {
         brandLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(10)
-            $0.leading.equalToSuperview().inset(12)
+            $0.top.equalTo(productFrame.snp.top).offset(10)
+            $0.leading.equalTo(productFrame.snp.leading).offset(12)
         }
         
         productLabel.snp.makeConstraints {
             $0.top.equalTo(brandLabel.snp.bottom).offset(4)
-            $0.leading.equalToSuperview().inset(12)
+            $0.leading.equalTo(productFrame.snp.leading).offset(12)
         }
         
         pointLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(12)
+            $0.centerY.equalTo(productFrame.snp.centerY)
+            $0.trailing.equalTo(productFrame.snp.trailing).offset(-12)
         }
         
         titleLabel.snp.makeConstraints {
@@ -128,13 +130,13 @@ final class PayPopupView: UIView {
         }
         
         cancelButton.snp.makeConstraints {
-            $0.leading.equalToSuperview()
+            $0.leading.bottom.equalToSuperview()
             $0.width.equalTo(self.frame.width / 2)
             $0.height.equalTo(44)
         }
         
         changeButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview()
+            $0.trailing.bottom.equalToSuperview()
             $0.width.equalTo(self.frame.width / 2)
             $0.height.equalTo(44)
         }
