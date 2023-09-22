@@ -20,7 +20,7 @@ final class BuyFailedViewController: UIViewController {
     
     // MARK: - Setting
     private func setup() {
-        self.view.backgroundColor = .black.withAlphaComponent(0.3)
+        self.view.backgroundColor = .black.withAlphaComponent(0.6)
         setLayout()
         actionButton()
     }

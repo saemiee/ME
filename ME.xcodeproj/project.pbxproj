@@ -32,6 +32,7 @@
 		843536D92ABC3AAB008EF27E /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536D82ABC3AAB008EF27E /* PopupButton.swift */; };
 		843536DB2ABC3C8C008EF27E /* UIVeiw+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */; };
 		843536DD2ABC5FE2008EF27E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */; };
+		843536DF2ABC93CF008EF27E /* PayPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DE2ABC93CF008EF27E /* PayPopupView.swift */; };
 		8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5202A820A1E00EDCE22 /* AppDelegate.swift */; };
 		8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */; };
 		8447E5252A820A1E00EDCE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E5242A820A1E00EDCE22 /* ViewController.swift */; };
@@ -89,6 +90,7 @@
 		843536D82ABC3AAB008EF27E /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVeiw+Extension.swift"; sourceTree = "<group>"; };
 		843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		843536DE2ABC93CF008EF27E /* PayPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPopupView.swift; sourceTree = "<group>"; };
 		8447E51D2A820A1E00EDCE22 /* ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447E5202A820A1E00EDCE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8447E5222A820A1E00EDCE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		843536E02ABC93D4008EF27E /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				843536DE2ABC93CF008EF27E /* PayPopupView.swift */,
+				8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		8447E5142A820A1E00EDCE22 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +257,7 @@
 		8447E5442A821BC500EDCE22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				843536E02ABC93D4008EF27E /* Popup */,
 				843536962AAF39EF008EF27E /* Button */,
 				84766D822AA4524100696B8A /* Cell */,
 				8457A8532A8E13BD0009150D /* HomeView */,
@@ -253,7 +265,6 @@
 				8457A84C2A8B73D90009150D /* AccessGuideView.swift */,
 				8432352A2AA9ED250086B90C /* TagDetailView.swift */,
 				8432352E2AAC57AF0086B90C /* ShopDetailView.swift */,
-				8432354D2AAD82100086B90C /* BuyFailedPopupView.swift */,
 				843536A02AB6F8B0008EF27E /* ActivityRingView.swift */,
 				843536AF2ABAB7ED008EF27E /* VignettingView.swift */,
 			);
@@ -303,9 +314,9 @@
 		8457A8532A8E13BD0009150D /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				8457A8542A8E13DC0009150D /* MyView.swift */,
 				847B23022A909AAE000B79AB /* ExerciseCard.swift */,
 				847B23042A962D6C000B79AB /* HomeTagView.swift */,
-				8457A8542A8E13DC0009150D /* MyView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -446,6 +457,7 @@
 				843536B02ABAB7ED008EF27E /* VignettingView.swift in Sources */,
 				8447E5DA2A84ECA800EDCE22 /* OnboardingViewController.swift in Sources */,
 				8432352F2AAC57AF0086B90C /* ShopDetailView.swift in Sources */,
+				843536DF2ABC93CF008EF27E /* PayPopupView.swift in Sources */,
 				8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */,
 				843536DD2ABC5FE2008EF27E /* UIButton+Extension.swift in Sources */,
 				840A5B6B2A9B4EDA0016BD0B /* Shop.swift in Sources */,
