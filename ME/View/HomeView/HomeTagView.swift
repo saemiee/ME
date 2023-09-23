@@ -22,12 +22,6 @@ final class HomeTagView: UIView {
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
-    lazy var tag1StackView = UIStackView().then {
-        $0.axis = .vertical
-        $0.distribution = .fill
-        $0.alignment = .center
-    }
-    
     let tagImageView2 = UIImageView().then {
         $0.image = UIImage(named: "pool")
     }
@@ -36,12 +30,6 @@ final class HomeTagView: UIView {
         $0.text = "수영왕"
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-    }
-    
-    lazy var tag2StackView = UIStackView().then {
-        $0.axis = .vertical
-        $0.distribution = .fill
-        $0.alignment = .center
     }
     
     let tagImageView3 = UIImageView().then {
@@ -54,14 +42,8 @@ final class HomeTagView: UIView {
         $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
-    lazy var tag3StackView = UIStackView().then {
-        $0.axis = .vertical
-        $0.distribution = .fill
-        $0.alignment = .center
-    }
-    
     lazy var stackView = UIStackView().then {
-        $0.spacing = 32
+        $0.spacing = 20
         $0.axis = .horizontal
         $0.distribution = .fillEqually
         $0.alignment = .center
@@ -81,11 +63,11 @@ final class HomeTagView: UIView {
     
     // MARK: - Add View
     private func addView() {
-        [tagImageView1,tagLabel1].forEach { tag1StackView.addArrangedSubview($0) }
-        [tagImageView2,tagLabel2].forEach { tag2StackView.addArrangedSubview($0) }
-        [tagImageView3,tagLabel3].forEach { tag3StackView.addArrangedSubview($0) }
+        [tagImageView1, tagImageView2, tagImageView3].forEach { stackView.addArrangedSubview($0) }
         
-        [tag1StackView,tag2StackView, tag3StackView].forEach { stackView.addArrangedSubview($0) }
+        tagImageView1.addSubview(tagLabel1)
+        tagImageView2.addSubview(tagLabel2)
+        tagImageView3.addSubview(tagLabel3)
         
         self.addSubview(stackView)
     }
@@ -104,10 +86,25 @@ final class HomeTagView: UIView {
     }
     
     private func setLayout() {
+        tagLabel1.snp.makeConstraints {
+            $0.centerX.equalTo(tagImageView1.snp.centerX)
+            $0.bottom.equalTo(tagImageView1.snp.bottom)
+        }
+        
+        tagLabel2.snp.makeConstraints {
+            $0.centerX.equalTo(tagImageView2.snp.centerX)
+            $0.bottom.equalTo(tagImageView2.snp.bottom)
+        }
+        
+        tagLabel3.snp.makeConstraints {
+            $0.centerX.equalTo(tagImageView3.snp.centerX)
+            $0.bottom.equalTo(tagImageView3.snp.bottom)
+        }
+        
         stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(26)
-            $0.top.equalToSuperview().inset(4)
-            $0.bottom.equalToSuperview().inset(14)
+            $0.leading.trailing.equalToSuperview().inset(22)
+            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(20)
         }
     }
 }
