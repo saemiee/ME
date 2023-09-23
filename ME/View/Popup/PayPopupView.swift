@@ -18,7 +18,7 @@ final class PayPopupView: UIView {
     }
     
     let productFrame = UIView().then {
-        $0.backgroundColor = .darkGray
+        $0.backgroundColor = .gray
         $0.layer.cornerRadius = 4
         $0.clipsToBounds = true
     }
@@ -59,7 +59,11 @@ final class PayPopupView: UIView {
     
     let cancelButton = PopupButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0), title: "취소")
     
-    let changeButton = PopupButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0), title: "교환")
+    let divLine = UIView().then {
+        $0.backgroundColor = .white
+    }
+    
+    let changeButton = PopupButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0), title: "확인")
     
 
     override init(frame: CGRect) {
@@ -84,24 +88,22 @@ final class PayPopupView: UIView {
     
     // MARK: Add View
     private func addView() {
+        [titleLabel, productFrame, myPointLabel, myPoint, cancelButton, divLine, changeButton].forEach { self.addSubview($0) }
         [brandLabel, productLabel, pointLabel].forEach { productFrame.addSubview($0) }
-        [titleLabel, productFrame, myPointLabel, myPointLabel, cancelButton, changeButton].forEach {
-            self.addSubview($0)
-        }
     }
     
     // MARK: - Layout
     private func setLayout() {
         brandLabel.snp.makeConstraints {
-            $0.top.equalTo(productFrame.snp.top).offset(10)
+            $0.top.equalTo(productFrame.snp.top).offset(14)
             $0.leading.equalTo(productFrame.snp.leading).offset(12)
         }
-        
+
         productLabel.snp.makeConstraints {
-            $0.top.equalTo(brandLabel.snp.bottom).offset(4)
+            $0.top.equalTo(brandLabel.snp.bottom).offset(8)
             $0.leading.equalTo(productFrame.snp.leading).offset(12)
         }
-        
+
         pointLabel.snp.makeConstraints {
             $0.centerY.equalTo(productFrame.snp.centerY)
             $0.trailing.equalTo(productFrame.snp.trailing).offset(-12)
@@ -118,26 +120,33 @@ final class PayPopupView: UIView {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(titleLabel.snp.bottom).offset(23)
         }
-        
+
         myPointLabel.snp.makeConstraints {
             $0.top.equalTo(productFrame.snp.bottom).offset(23)
-            $0.leading.equalToSuperview().inset(28)
+            $0.trailing.equalTo(myPoint.snp.leading).offset(-16)
         }
-        
+
         myPoint.snp.makeConstraints {
             $0.top.equalTo(productFrame.snp.bottom).offset(23)
             $0.trailing.equalToSuperview().inset(28)
         }
-        
+
         cancelButton.snp.makeConstraints {
             $0.leading.bottom.equalToSuperview()
-            $0.width.equalTo(self.frame.width / 2)
+            $0.width.equalTo(139)
             $0.height.equalTo(44)
         }
         
+        divLine.snp.makeConstraints {
+            $0.height.equalTo(44)
+            $0.width.equalTo(0.2)
+            $0.bottom.equalToSuperview()
+            $0.centerX.equalToSuperview()
+        }
+
         changeButton.snp.makeConstraints {
             $0.trailing.bottom.equalToSuperview()
-            $0.width.equalTo(self.frame.width / 2)
+            $0.width.equalTo(139)
             $0.height.equalTo(44)
         }
     }

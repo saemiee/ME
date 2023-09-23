@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PopupButton: UIButton {
+class PopupButton: UIButton {
     
     init(frame: CGRect, title: String) {
         super.init(frame: frame)
