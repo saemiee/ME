@@ -71,5 +71,4 @@ final class BuyFailedPopupView: UIView {
             $0.height.equalTo(44)
         }
     }
-    
 }

@@ -46,6 +46,4 @@ final class TagCollectionViewCell: UICollectionViewCell {
             $0.bottom.equalToSuperview()
         }
     }
-
-    
 }

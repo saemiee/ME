@@ -8,21 +8,25 @@
 import UIKit
 import Then
 
-final class MyButton: UIBarButtonItem {
+final class MyButton: UIButton {
     
-    convenience init(target: Any?, action: Selector) {
-        let buttonSize = CGSize(width: 20, height: 20)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        let myButton = UIButton(type: .system).then {
-            $0.setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20)), for: .normal)
-            $0.tintColor = .yellow
-            $0.backgroundColor = .clear
-            $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
-            $0.frame = CGRect(origin: .zero, size: buttonSize)
-        }
-        
-        myButton.addTarget(target, action: action, for: .touchUpInside)
-        
-        self.init(customView: myButton)
+        setButton()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Button Setting
+    func setButton() {
+        setImage(UIImage(systemName: "person.crop.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 26)), for: .normal)
+        tintColor = .yellow
+        backgroundColor = .clear
+        imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
+
+

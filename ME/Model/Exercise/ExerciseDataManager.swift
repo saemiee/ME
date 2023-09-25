@@ -10,8 +10,7 @@ import UIKit
 final class ExerciseDataManager {
     
     private var exerciseDataArray: [Exercise] = []
-    
-    // MARK: - Make Exercise Data
+
     func makeExerciseData() {
         exerciseDataArray = [
             Exercise(exerciseImage: UIImage(systemName: "figure.walk", withConfiguration: UIImage.SymbolConfiguration(pointSize: 22)), exercise: "걷기", kcal: 1000, point: 100),
@@ -30,9 +29,7 @@ final class ExerciseDataManager {
         ]
     }
     
-    // MARK: - Get Exercise Data
     func getExerciseData() -> [Exercise] {
         return exerciseDataArray
     }
-    
 }

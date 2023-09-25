@@ -150,5 +150,4 @@ final class PayPopupView: UIView {
             $0.height.equalTo(44)
         }
     }
-    
 }

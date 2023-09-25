@@ -49,7 +49,6 @@ final class HomeTagView: UIView {
         $0.alignment = .center
     }
     
-    // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         

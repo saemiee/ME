@@ -9,4 +9,13 @@ import UIKit
 
 final class TagViewModel {
     
+    let dataManager: TagDataManager
+    
+    private var tagsList: [Tag] {
+        return dataManager.getTagData()
+    }
+    
+    init(dataManager: TagDataManager) {
+        self.dataManager = dataManager
+    }
 }

@@ -7,9 +7,21 @@
 
 import UIKit
 
-final class TagDataManager {
+// MARK: - Tag Protocol
+protocol TagType {
+    func makeTagData()
+    func getTagData() -> [Tag]
+    subscript(index: Int) -> Tag { get }
+}
+
+// MARK: - TagData Manager
+final class TagDataManager: TagType {
     
     private var tagDataArray: [Tag] = []
+    
+    init() {
+        makeTagData()
+    }
     
     func makeTagData() {
         tagDataArray = [
@@ -28,7 +40,6 @@ final class TagDataManager {
         ]
     }
     
-    // MARK: - Get Exercise Data
     func getTagData() -> [Tag] {
         return tagDataArray
     }
@@ -38,6 +49,5 @@ final class TagDataManager {
             return tagDataArray[index]
         }
     }
-
 }
 

@@ -42,5 +42,4 @@ final class VignettingView: UIView {
             $0.center.equalToSuperview()
         }
     }
-    
 }

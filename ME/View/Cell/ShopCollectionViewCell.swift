@@ -10,6 +10,7 @@ import SnapKit
 import Then
 
 final class ShopCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Properties
     let background = VignettingView()
 
@@ -81,5 +82,4 @@ final class ShopCollectionViewCell: UICollectionViewCell {
             $0.leading.equalToSuperview()
         }
     }
-    
 }

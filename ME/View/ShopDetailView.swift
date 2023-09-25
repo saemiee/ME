@@ -145,5 +145,4 @@ final class ShopDetailView: UIView {
             $0.width.equalTo(340)
         }
     }
-
 }
