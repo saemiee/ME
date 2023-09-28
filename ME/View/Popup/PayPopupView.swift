@@ -11,6 +11,15 @@ import Then
 
 final class PayPopupView: UIView {
     
+    var product: Shop? {
+        didSet {
+            guard var product = product else { return }
+            self.brandLabel.text = product.brandName
+            self.productLabel.text = product.productName
+            self.pointLabel.text = String(product.price)
+        }
+    }
+    
     let titleLabel = UILabel().then {
         $0.textColor = .white
         $0.text = "포인트 교환"
@@ -27,21 +36,18 @@ final class PayPopupView: UIView {
         $0.textColor = .lightGray
         $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         $0.textAlignment = .left
-        $0.text = "굽네치킨"
     }
     
     let productLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.textAlignment = .left
-        $0.text = "고추바사삭 + 콜라 1.25"
     }
     
     let pointLabel = UILabel().then {
         $0.textColor = .lightOrange
         $0.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.textAlignment = .right
-        $0.text = "2000 p"
     }
     
     let myPointLabel = UILabel().then {

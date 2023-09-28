@@ -10,6 +10,10 @@ import UIKit
 final class ExerciseDataManager {
     
     private var exerciseDataArray: [Exercise] = []
+    
+    init() {
+        makeExerciseData()
+    }
 
     func makeExerciseData() {
         exerciseDataArray = [

@@ -16,8 +16,7 @@ final class TabBarViewController: UITabBarController {
         
         let homeVC = HomeViewController()
         let shopVC = ShopViewController()
-        
-        
+    
         homeVC.title = "ME"
         shopVC.title = "Shop"
         
@@ -40,5 +39,4 @@ final class TabBarViewController: UITabBarController {
         tabBar.tintColor = UIColor.yellow
         tabBar.backgroundColor = .background
     }
-
 }

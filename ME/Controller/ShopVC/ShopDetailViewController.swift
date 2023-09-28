@@ -11,6 +11,8 @@ import SnapKit
 final class ShopDetailViewController: UIViewController {
     
     // MARK: - Properties
+    let popupVC = PayPopupViewController()
+    
     private let detailView = ShopDetailView()
     
     var product: Shop?
@@ -55,8 +57,8 @@ final class ShopDetailViewController: UIViewController {
     
     // MARK: - Bay seccess
     func buySuccess() {
-        let sucessVC = PayPopupViewController()
-        
+        let sucessVC = popupVC
+    
         sucessVC.modalPresentationStyle = .overFullScreen
         present(sucessVC, animated: false)
     }
@@ -68,6 +70,5 @@ final class ShopDetailViewController: UIViewController {
         failedVC.modalPresentationStyle = .overFullScreen
         present(failedVC, animated: false)
     }
-    
 }
     

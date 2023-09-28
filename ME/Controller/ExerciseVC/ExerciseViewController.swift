@@ -51,6 +51,11 @@ final class ExerciseViewController: UIViewController {
         setupLayout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     // MARK: - Navigation Bar Setting
     func setupNavBar() {
         title = "운동"
@@ -100,7 +105,6 @@ final class ExerciseViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
         }
     }
-
 }
 
 // MARK: - UICollectionView DataSource Extension
@@ -111,7 +115,7 @@ extension ExerciseViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.exerciseCellIdentifier, for: indexPath) as! ExerciseCollectionViewCell
-        
+
         cell.exerciseImage.image = exerciseList[indexPath.row].exerciseImage
         cell.exerciseLabel.text = exerciseList[indexPath.row].exercise
         cell.kcalLabel.text = "\(exerciseList[indexPath.row].kcal) Kcal"

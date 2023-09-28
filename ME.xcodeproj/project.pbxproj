@@ -25,9 +25,7 @@
 		843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A02AB6F8B0008EF27E /* ActivityRingView.swift */; };
 		843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A32AB6FB0A008EF27E /* HealthKitManager.swift */; };
 		843536A82AB96365008EF27E /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A72AB96365008EF27E /* MyButton.swift */; };
-		843536AA2ABAB5A7008EF27E /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536A92ABAB5A7008EF27E /* TagViewModel.swift */; };
 		843536AC2ABAB5BF008EF27E /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */; };
-		843536AE2ABAB5EC008EF27E /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */; };
 		843536B02ABAB7ED008EF27E /* VignettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536AF2ABAB7ED008EF27E /* VignettingView.swift */; };
 		843536D92ABC3AAB008EF27E /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536D82ABC3AAB008EF27E /* PopupButton.swift */; };
 		843536DB2ABC3C8C008EF27E /* UIVeiw+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */; };
@@ -84,9 +82,7 @@
 		843536A02AB6F8B0008EF27E /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		843536A32AB6FB0A008EF27E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		843536A72AB96365008EF27E /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
-		843536A92ABAB5A7008EF27E /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
-		843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
 		843536AF2ABAB7ED008EF27E /* VignettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignettingView.swift; sourceTree = "<group>"; };
 		843536D82ABC3AAB008EF27E /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVeiw+Extension.swift"; sourceTree = "<group>"; };
@@ -184,10 +180,8 @@
 		843536A22AB6FA25008EF27E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				843536A32AB6FB0A008EF27E /* HealthKitManager.swift */,
-				843536A92ABAB5A7008EF27E /* TagViewModel.swift */,
 				843536AB2ABAB5BF008EF27E /* ShopViewModel.swift */,
-				843536AD2ABAB5EC008EF27E /* ExerciseViewModel.swift */,
+				843536A32AB6FB0A008EF27E /* HealthKitManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -276,13 +270,11 @@
 		8447E5A72A826E1200EDCE22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84487CC52AC1A44800222BD0 /* TagVC */,
+				84487CC62AC1A45A00222BD0 /* ShopVC */,
+				84487CC72AC1A46E00222BD0 /* ExerciseVC */,
 				8447E5242A820A1E00EDCE22 /* ViewController.swift */,
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
-				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
-				8457A8442A8A31BA0009150D /* TagViewController.swift */,
-				8432351E2AA9AC170086B90C /* TagDetailViewController.swift */,
-				8457A84A2A8B73240009150D /* ShopViewController.swift */,
-				8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */,
 				8457A8482A8B72C30009150D /* HomeViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 				840A5B612A99E9480016BD0B /* MyViewController.swift */,
@@ -301,6 +293,32 @@
 				8447E5522A822CEE00EDCE22 /* Onboarding4.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		84487CC52AC1A44800222BD0 /* TagVC */ = {
+			isa = PBXGroup;
+			children = (
+				8457A8442A8A31BA0009150D /* TagViewController.swift */,
+				8432351E2AA9AC170086B90C /* TagDetailViewController.swift */,
+			);
+			path = TagVC;
+			sourceTree = "<group>";
+		};
+		84487CC62AC1A45A00222BD0 /* ShopVC */ = {
+			isa = PBXGroup;
+			children = (
+				8457A84A2A8B73240009150D /* ShopViewController.swift */,
+				8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */,
+			);
+			path = ShopVC;
+			sourceTree = "<group>";
+		};
+		84487CC72AC1A46E00222BD0 /* ExerciseVC */ = {
+			isa = PBXGroup;
+			children = (
+				8447E5DB2A84F1AD00EDCE22 /* ExerciseViewController.swift */,
+			);
+			path = ExerciseVC;
 			sourceTree = "<group>";
 		};
 		8457A80A2A872E130009150D /* Model */ = {
@@ -444,7 +462,6 @@
 				8457A8492A8B72C30009150D /* HomeViewController.swift in Sources */,
 				8457A80C2A872E540009150D /* Exercise.swift in Sources */,
 				843536AC2ABAB5BF008EF27E /* ShopViewModel.swift in Sources */,
-				843536AE2ABAB5EC008EF27E /* ExerciseViewModel.swift in Sources */,
 				840A5B622A99E9480016BD0B /* MyViewController.swift in Sources */,
 				8447E52B2A820A1E00EDCE22 /* ME.xcdatamodeld in Sources */,
 				8447E54A2A821E2000EDCE22 /* UILabel+Extension.swift in Sources */,
@@ -454,7 +471,6 @@
 				843536A42AB6FB0A008EF27E /* HealthKitManager.swift in Sources */,
 				843536A12AB6F8B0008EF27E /* ActivityRingView.swift in Sources */,
 				8432354C2AAD81B80086B90C /* BuyFailedViewController.swift in Sources */,
-				843536AA2ABAB5A7008EF27E /* TagViewModel.swift in Sources */,
 				8447E5212A820A1E00EDCE22 /* AppDelegate.swift in Sources */,
 				847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */,
 				8447E5232A820A1E00EDCE22 /* SceneDelegate.swift in Sources */,

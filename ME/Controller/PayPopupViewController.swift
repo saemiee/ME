@@ -11,6 +11,8 @@ import SnapKit
 final class PayPopupViewController: UIViewController {
     
     let popupView = PayPopupView()
+    
+    var product: Shop?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,14 @@ final class PayPopupViewController: UIViewController {
     // MARK: - Setting
     private func setup() {
         self.view.backgroundColor = .black.withAlphaComponent(0.6)
+        
+        setData()
         setLayout()
         actionButton()
+    }
+    
+    private func setData() {
+        popupView.product = product
     }
     
     // MARK: - Layout

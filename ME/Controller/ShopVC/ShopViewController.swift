@@ -114,9 +114,11 @@ extension ShopViewController: UICollectionViewDelegateFlowLayout {
 extension ShopViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = ShopDetailViewController()
+        
         let currentItem = shopDataManager.getShopData()[indexPath.row]
         
         detailVC.product = currentItem
+        detailVC.popupVC.product = currentItem
         
         detailVC.modalPresentationStyle = .automatic
         present(detailVC, animated: true)

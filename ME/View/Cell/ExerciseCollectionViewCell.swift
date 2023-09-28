@@ -10,6 +10,7 @@ import SnapKit
 import Then
 
 final class ExerciseCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Properties
     let circle = UIView().then {
         $0.backgroundColor = .darkGray
@@ -106,5 +107,4 @@ final class ExerciseCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview().inset(30)
         }
     }
-    
 }
