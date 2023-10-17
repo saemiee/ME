@@ -19,9 +19,10 @@ final class ActivityRingView: UIView {
         fillPath.set()
         path.fill()
         
-        let semiCircle = UIBezierPath(arcCenter: center, radius: 40, startAngle: 0, endAngle: (360 * .pi), clockwise: true)
+        let circle = UIBezierPath(arcCenter: center, radius: 40, startAngle: 0, endAngle: (360 * .pi), clockwise: true)
         
         UIColor.gray.set()
-        semiCircle.fill()
+        circle.fill()
     }
+    
 }

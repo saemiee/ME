@@ -23,7 +23,7 @@ final class MyViewController: UIViewController {
         $0.setTitleColor(UIColor.yellow, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         $0.backgroundColor = .clear
-        $0.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
+        $0.addTarget(MyViewController.self, action: #selector(checkButtonTapped), for: .touchUpInside)
     }
     
     private let logoutButton = UIButton().then {

@@ -8,67 +8,66 @@
 import UIKit
 import HealthKit
 
-class HealthKitManager {
+final class HealthKitManager {
     
     let healthStore = HKHealthStore()
     
-    var readTypes: Set<HKObjectType> {
-        let workoutType = HKObjectType.workoutType()
-        let activeEnergyType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!
-        
-        return [workoutType, activeEnergyType]
-    }
+    let workoutTypes: Set<HKWorkoutActivityType> = [
+        .walking,
+        .swimming,
+        .cycling,
+        .pilates,
+        .running,
+        .elliptical,
+        .coreTraining,
+        .stepTraining,
+        .socialDance,
+        .cardioDance,
+        .functionalStrengthTraining,
+        .hiking,
+        .highIntensityIntervalTraining,
+        .rowing
+    ]
     
-    // MARK: - Check HealthKit Availability
-    func checkHealthKit() {
+    var typesToRequest: Set<HKSampleType> = []
+    
+    func configure() {
         if !HKHealthStore.isHealthDataAvailable() {
-            requestAuthorization()
+            authorizingAccess()
         } else {
-            readData()
+            print("데이터 받아오기")
+        }
+    }
+
+    func kcalCalculator() {
+        for activityType in workoutTypes {
+            let energyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+            let predicate = HKQuery.predicateForWorkouts(with: activityType)
+            typesToRequest.insert(energyType)
+            typesToRequest.insert(HKObjectType.workoutType())
+            
+            let query = HKStatisticsQuery(quantityType: energyType, quantitySamplePredicate: predicate, options: .cumulativeSum) { (query, result, error) in
+                if let sum = result?.sumQuantity() {
+                    let caloriesBurned = sum.doubleValue(for: HKUnit.kilocalorie())
+                }
+            }
+            
+            healthStore.execute(query)
         }
     }
     
-    // MARK: - Request Authorization
-    func requestAuthorization() {
-        healthStore.requestAuthorization(toShare: nil, read: readTypes) { success, error in
-            if error != nil{
-                print(error.debugDescription)
-            } else {
-                if success {
-                    print("권한이 허락되었습니다.")
+    func authorizingAccess() {
+        healthStore.requestAuthorization(toShare: typesToRequest, read: typesToRequest) { (success, error) in
+            if !success {
+                if let error = error {
+                    print(error.localizedDescription)
                 } else {
-                    print("권한이 아직 허용되지 않았습니다.")
+                    print("HealthKit 권한 요청 실패: 알 수 없는 오류")
                 }
+            } else {
+                print("HealthKit 권한 요청 성공")
             }
         }
-    }
-    
-    // MARK: - Read Workout Data
-    func readData(){
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
-        
-        let workoutType = HKObjectType.workoutType()
-        
-        let query = HKSampleQuery(sampleType: workoutType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { query, samples, error in
-            if let workoutSamples = samples as? [HKWorkout] {
-                var kcalByWorkoutType: [HKWorkoutActivityType: Double] = [:]
-                
-                for workout in workoutSamples {
-                    let activityType = workout.workoutActivityType
-                    
-                    if let kcalBurned = workout.totalEnergyBurned?.doubleValue(for: HKUnit.kilocalorie()) {
-                        kcalByWorkoutType[activityType] = (kcalByWorkoutType[activityType] ?? 0) + kcalBurned
-                    }
-                }
-                
-                DispatchQueue.main.async {
-                    print("")
-                }
-            }
-        }
-        self.healthStore.execute(query)
     }
     
 }

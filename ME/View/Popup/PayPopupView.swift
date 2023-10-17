@@ -13,10 +13,10 @@ final class PayPopupView: UIView {
     
     var product: Shop? {
         didSet {
-            guard var product = product else { return }
+            guard let product = product else { return }
             self.brandLabel.text = product.brandName
             self.productLabel.text = product.productName
-            self.pointLabel.text = String(product.price)
+            self.pointLabel.text = "\(product.price) p"
         }
     }
     

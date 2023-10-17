@@ -14,7 +14,7 @@ final class TagDetailView: UIView {
     // MARK: - Properties
     var tagItem: Tag? {
         didSet {
-            guard var tagItem = tagItem else { return }
+            guard let tagItem = tagItem else { return }
             tagLabel.text = tagItem.tagName
             tagDescription.text = tagItem.tagDescription
             tagImage.image = tagItem.tagImage
