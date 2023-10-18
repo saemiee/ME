@@ -12,10 +12,6 @@ import Then
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
-    let myButton: UIButton = MyButton().then {
-        $0.addTarget(self, action: #selector(myTapped), for: .touchUpInside)
-    }
-    
     private let myLabel = UILabel().then {
         $0.text = "MY"
         $0.textColor = .white
@@ -67,26 +63,31 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .background
+        setup()
         addView()
         setLayout()
     }
     
+    // MARK: - Setting
+    private func setup() {
+        view.backgroundColor = .background
+        
+        let myButton = MyButton()
+        myButton.addTarget(self, action: #selector(myTapped), for: .touchUpInside)
+    
+        let customBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: myButton)
+        
+        navigationItem.rightBarButtonItem = customBarButtonItem
+    }
+    
     // MARK: - Add View
     private func addView() {
-        self.navigationController?.navigationBar.addSubview(myButton)
-        
         [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
         [myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
     // MARK: - Layout
     private func setLayout() {
-        myButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(50)
-            $0.trailing.equalToSuperview().inset(20)
-        }
-        
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
             $0.leading.equalToSuperview().inset(20)
