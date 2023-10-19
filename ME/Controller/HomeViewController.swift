@@ -48,14 +48,7 @@ final class HomeViewController: UIViewController {
         $0.addTarget(self, action: #selector(tagMoreTapped), for: .touchUpInside)
     }
     
-    lazy var exerciseCardView = UIView().then {
-        $0.backgroundColor = .clear
-    }
-    
-    private let exerciseCard1 = ExerciseCard()
-    private let exerciseCard2 = ExerciseCard()
-    private let exerciseCard3 = ExerciseCard()
-    private let exerciseCard4 = ExerciseCard()
+    private let exerciseCardView = ExerciseCardView()
     
     private let tagView = HomeTagView()
     
@@ -82,7 +75,6 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Add View
     private func addView() {
-        [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
         [myLabel, myView, exercisesLabel, exercisesMore, exerciseCardView, tagLabel, tagMore, tagView].forEach { view.addSubview($0) }
     }
     
@@ -90,77 +82,50 @@ final class HomeViewController: UIViewController {
     private func setLayout() {
         myLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(164)
-            $0.leading.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(28)
             $0.height.equalTo(24)
         }
         
         myView.snp.makeConstraints {
-            $0.top.equalTo(myLabel.snp.bottom).offset(9)
-            $0.bottom.equalToSuperview().inset(488)
-            $0.leading.trailing.equalToSuperview().inset(22)
+            $0.top.equalTo(myLabel.snp.bottom).offset(14)
+            $0.height.equalTo(170)
+            $0.leading.trailing.equalToSuperview().inset(28)
         }
         
         exercisesLabel.snp.makeConstraints {
-            $0.top.equalTo(myView.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().inset(20)
+            $0.top.equalTo(myView.snp.bottom).offset(36)
+            $0.leading.equalToSuperview().inset(28)
             $0.height.equalTo(24)
         }
         
         exercisesMore.snp.makeConstraints {
             $0.top.equalTo(myView.snp.bottom).offset(34)
-            $0.trailing.equalToSuperview().inset(20)
-        }
-        
-        exerciseCard1.snp.makeConstraints {
-            $0.width.equalTo(164)
-            $0.height.equalTo(67)
-            $0.leading.equalTo(exerciseCardView.snp.leading)
-            $0.top.equalTo(exerciseCardView.snp.top)
-        }
-        
-        exerciseCard2.snp.makeConstraints {
-            $0.width.equalTo(164)
-            $0.height.equalTo(67)
-            $0.trailing.equalTo(exerciseCardView.snp.trailing)
-            $0.top.equalTo(exerciseCardView.snp.top)
-        }
-        
-        exerciseCard3.snp.makeConstraints {
-            $0.width.equalTo(164)
-            $0.height.equalTo(67)
-            $0.leading.equalTo(exerciseCardView.snp.leading)
-            $0.bottom.equalTo(exerciseCardView.snp.bottom)
-        }
-        
-        exerciseCard4.snp.makeConstraints {
-            $0.width.equalTo(164)
-            $0.height.equalTo(67)
-            $0.trailing.equalTo(exerciseCardView.snp.trailing)
-            $0.bottom.equalTo(exerciseCardView.snp.bottom)
+            $0.trailing.equalToSuperview().inset(28)
         }
         
         exerciseCardView.snp.makeConstraints {
-            $0.top.equalTo(exercisesLabel.snp.bottom).offset(9)
-            $0.bottom.equalToSuperview().inset(276)
+            $0.top.equalTo(exercisesLabel.snp.bottom).offset(14)
+            $0.height.equalTo(136)
             $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().inset(26)
+            $0.leading.equalToSuperview().inset(32)
         }
         
         tagLabel.snp.makeConstraints {
-            $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().inset(20)
+            $0.top.equalTo(exerciseCardView.snp.bottom).offset(36)
+            $0.leading.equalToSuperview().inset(28)
+            $0.height.equalTo(24)
         }
         
         tagMore.snp.makeConstraints {
             $0.top.equalTo(exerciseCardView.snp.bottom).offset(34)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(28)
         }
         
         tagView.snp.makeConstraints {
-            $0.top.equalTo(tagLabel.snp.bottom).offset(9)
+            $0.top.equalTo(tagLabel.snp.bottom).offset(14)
             $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().inset(20)
-            $0.height.equalTo(107)
+            $0.leading.equalToSuperview().inset(28)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
         }
     }
     

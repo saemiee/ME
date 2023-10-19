@@ -62,6 +62,7 @@
 		8457A84B2A8B73240009150D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84A2A8B73240009150D /* ShopViewController.swift */; };
 		8457A84D2A8B73D90009150D /* AccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A84C2A8B73D90009150D /* AccessGuideView.swift */; };
 		8457A8552A8E13DC0009150D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457A8542A8E13DC0009150D /* MyView.swift */; };
+		845C8D4C2AE10C4200F4D373 /* ExerciseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C8D4B2AE10C4200F4D373 /* ExerciseCardView.swift */; };
 		84766D812AA4509700696B8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84766D802AA4509700696B8A /* Constants.swift */; };
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
 		847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* HomeTagView.swift */; };
@@ -125,6 +126,7 @@
 		8457A84A2A8B73240009150D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		8457A84C2A8B73D90009150D /* AccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessGuideView.swift; sourceTree = "<group>"; };
 		8457A8542A8E13DC0009150D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		845C8D4B2AE10C4200F4D373 /* ExerciseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCardView.swift; sourceTree = "<group>"; };
 		84766D802AA4509700696B8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
 		847B23042A962D6C000B79AB /* HomeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTagView.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				8457A8542A8E13DC0009150D /* MyView.swift */,
 				847B23022A909AAE000B79AB /* ExerciseCard.swift */,
 				847B23042A962D6C000B79AB /* HomeTagView.swift */,
+				845C8D4B2AE10C4200F4D373 /* ExerciseCardView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				84487CD52ACD30B100222BD0 /* User+CoreDataProperties.swift in Sources */,
 				840A5B712AA0A5650016BD0B /* Tag.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
+				845C8D4C2AE10C4200F4D373 /* ExerciseCardView.swift in Sources */,
 				8432352D2AAC560A0086B90C /* ShopDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

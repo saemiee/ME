@@ -15,12 +15,12 @@ final class MyView: UIView {
     private let amountOfActivityLabel = UILabel().then {
         $0.text = "활동량"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     }
     
     private let amountOfActivity = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.text = "300 Kcal"
     }
     
@@ -33,12 +33,12 @@ final class MyView: UIView {
     private let pointLabel = UILabel().then {
         $0.text = "포인트"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     }
     
     private let point = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.text = "30 Point"
     }
     
@@ -51,12 +51,12 @@ final class MyView: UIView {
     private let bestExercisesLabel = UILabel().then {
         $0.text = "가장 많이 한 운동"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     }
     
     private let bestExercises = UILabel().then {
         $0.textColor = .yellow
-        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.text = "수영"
     }
     
@@ -70,7 +70,7 @@ final class MyView: UIView {
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.alignment = .leading
-        $0.spacing = 8
+        $0.spacing = 10
     }
     
     let activityRing = ActivityRingView().then {
@@ -113,25 +113,25 @@ final class MyView: UIView {
     // MARK: - Layout
     private func setLayout() {
         amountOfActivityStackView.snp.makeConstraints {
-            $0.height.equalTo(26)
+            $0.height.equalTo(20)
         }
         
         pointStackView.snp.makeConstraints {
-            $0.height.equalTo(26)
+            $0.height.equalTo(20)
         }
         
         bestExercisesStackView.snp.makeConstraints {
-            $0.height.equalTo(26)
+            $0.height.equalTo(20)
         }
         
         stackView.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(20)
-            $0.leading.equalToSuperview().inset(16)
+            $0.top.bottom.equalToSuperview().inset(18)
+            $0.leading.equalToSuperview().inset(20)
         }
         
         activityRing.snp.makeConstraints {
-            $0.width.height.equalTo(130)
-            $0.trailing.equalToSuperview().inset(40)
+            $0.width.height.equalTo(200)
+            $0.trailing.equalToSuperview().inset(12)
             $0.centerY.equalToSuperview()
         }
     }
