@@ -22,7 +22,7 @@ final class ExerciseCard: UIView {
     let exerciseLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        $0.text = "고강도 인터벌 트레이닝"
+        $0.text = "수영"
     }
     
     let kcalLabel = UILabel().then {

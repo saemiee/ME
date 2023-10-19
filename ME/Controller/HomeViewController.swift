@@ -125,7 +125,7 @@ final class HomeViewController: UIViewController {
             $0.top.equalTo(tagLabel.snp.bottom).offset(14)
             $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().inset(28)
-            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-14)
         }
     }
     

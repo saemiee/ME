@@ -18,8 +18,6 @@ final class ExerciseCardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .systemPink
-        
         addView()
         setLayout()
     }
