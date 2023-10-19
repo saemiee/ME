@@ -18,7 +18,7 @@ final class ExerciseCardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        backgroundColor = .systemPink
+        backgroundColor = .systemPink
         
         addView()
         setLayout()
@@ -36,26 +36,26 @@ final class ExerciseCardView: UIView {
     private func setLayout() {
         exerciseCard1.snp.makeConstraints {
             $0.leading.top.equalToSuperview()
-            $0.width.equalTo(160)
-            $0.height.equalTo(60)
+            $0.width.equalToSuperview().multipliedBy(0.49)
+            $0.height.equalTo(66)
         }
         
         exerciseCard2.snp.makeConstraints {
-            $0.trailing.top.equalToSuperview()
-            $0.width.equalTo(160)
-            $0.height.equalTo(60)
+            $0.top.trailing.equalToSuperview()
+            $0.width.equalToSuperview().multipliedBy(0.49)
+            $0.height.equalTo(66)
         }
         
         exerciseCard3.snp.makeConstraints {
             $0.leading.bottom.equalToSuperview()
-            $0.width.equalTo(160)
-            $0.height.equalTo(60)
+            $0.height.equalTo(66)
+            $0.width.equalToSuperview().multipliedBy(0.49)
         }
         
         exerciseCard4.snp.makeConstraints {
             $0.bottom.trailing.equalToSuperview()
-            $0.width.equalTo(160)
-            $0.height.equalTo(60)
+            $0.height.equalTo(66)
+            $0.width.equalToSuperview().multipliedBy(0.49)
         }
     }
 

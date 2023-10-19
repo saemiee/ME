@@ -105,9 +105,9 @@ final class HomeViewController: UIViewController {
         
         exerciseCardView.snp.makeConstraints {
             $0.top.equalTo(exercisesLabel.snp.bottom).offset(14)
-            $0.height.equalTo(136)
+            $0.height.equalTo(140)
             $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().inset(32)
+            $0.leading.equalToSuperview().inset(28)
         }
         
         tagLabel.snp.makeConstraints {

@@ -12,18 +12,20 @@ import Then
 final class ExerciseCard: UIView {
     
     // MARK: - Properties
-    private let exerciseImage = UIImageView().then {
+    let maxCharacters = 7
+    
+    let exerciseImage = UIImageView().then {
         $0.image = UIImage.init( systemName: "figure.open.water.swim", withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
         $0.tintColor = .yellow
     }
     
-    private let exerciseLabel = UILabel().then {
+    let exerciseLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        $0.text = "수영"
+        $0.text = "고강도 인터벌 트레이닝"
     }
     
-    private let kcalLabel = UILabel().then {
+    let kcalLabel = UILabel().then {
         $0.textColor = .yellow
         $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         $0.text = "1000 Kcal"
@@ -47,10 +49,19 @@ final class ExerciseCard: UIView {
         
         addView()
         setLayout()
+        configureUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureUI() {
+        if let text = exerciseLabel.text, text.count > maxCharacters {
+            let index = text.index(text.startIndex, offsetBy: maxCharacters)
+            let truncatedText = text.prefix(upTo: index) + "..."
+            exerciseLabel.text = String(truncatedText)
+        }
     }
     
     
