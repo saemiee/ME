@@ -282,20 +282,14 @@
 		8447E5A72A826E1200EDCE22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84487CC52AC1A44800222BD0 /* TagVC */,
-				84487CC62AC1A45A00222BD0 /* ShopVC */,
-				84487CC72AC1A46E00222BD0 /* ExerciseVC */,
 				8447E5242A820A1E00EDCE22 /* ViewController.swift */,
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
 				8457A8482A8B72C30009150D /* HomeViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
-				840A5B612A99E9480016BD0B /* MyViewController.swift */,
-				8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */,
-				843536E12ABD6933008EF27E /* PayPopupViewController.swift */,
-				84487DC42ADFD5C000222BD0 /* CouponBoxViewController.swift */,
-				84487DC62ADFD5D000222BD0 /* MEViewController.swift */,
-				84487DC82ADFD5F900222BD0 /* LogoutViewController.swift */,
-				84487DCA2ADFD62B00222BD0 /* CancelMembershipViewController.swift */,
+				84487CC52AC1A44800222BD0 /* TagVC */,
+				84487CC62AC1A45A00222BD0 /* ShopVC */,
+				84487CC72AC1A46E00222BD0 /* ExerciseVC */,
+				845C8D4E2AE3DFA600F4D373 /* MyVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +319,8 @@
 			children = (
 				8457A84A2A8B73240009150D /* ShopViewController.swift */,
 				8432352C2AAC560A0086B90C /* ShopDetailViewController.swift */,
+				8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */,
+				843536E12ABD6933008EF27E /* PayPopupViewController.swift */,
 			);
 			path = ShopVC;
 			sourceTree = "<group>";
@@ -358,6 +354,18 @@
 				847B23042A962D6C000B79AB /* HomeTagView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		845C8D4E2AE3DFA600F4D373 /* MyVC */ = {
+			isa = PBXGroup;
+			children = (
+				840A5B612A99E9480016BD0B /* MyViewController.swift */,
+				84487DC42ADFD5C000222BD0 /* CouponBoxViewController.swift */,
+				84487DC62ADFD5D000222BD0 /* MEViewController.swift */,
+				84487DC82ADFD5F900222BD0 /* LogoutViewController.swift */,
+				84487DCA2ADFD62B00222BD0 /* CancelMembershipViewController.swift */,
+			);
+			path = MyVC;
 			sourceTree = "<group>";
 		};
 		84766D7F2AA4506600696B8A /* Helpers */ = {
