@@ -174,6 +174,8 @@
 		843235462AAD67430086B90C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				84487CD22ACD30B100222BD0 /* User+CoreDataClass.swift */,
+				84487CD32ACD30B100222BD0 /* User+CoreDataProperties.swift */,
 				843235442AAD672A0086B90C /* CoreDataManager.swift */,
 			);
 			path = CoreData;
@@ -227,9 +229,9 @@
 			isa = PBXGroup;
 			children = (
 				840A5B672A9B43FB0016BD0B /* ME.entitlements */,
+				8447E53E2A82112F00EDCE22 /* Resources */,
 				84766D7F2AA4506600696B8A /* Helpers */,
 				8447E5412A82150E00EDCE22 /* Extension */,
-				8447E53E2A82112F00EDCE22 /* Resources */,
 				8457A80A2A872E130009150D /* Model */,
 				843536A22AB6FA25008EF27E /* ViewModel */,
 				8447E5442A821BC500EDCE22 /* View */,
@@ -340,8 +342,6 @@
 		8457A80A2A872E130009150D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84487CD22ACD30B100222BD0 /* User+CoreDataClass.swift */,
-				84487CD32ACD30B100222BD0 /* User+CoreDataProperties.swift */,
 				843235462AAD67430086B90C /* CoreData */,
 				843235272AA9E0560086B90C /* Tag */,
 				843235262AA9E04A0086B90C /* Shop */,

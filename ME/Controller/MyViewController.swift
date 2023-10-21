@@ -79,10 +79,30 @@ final class MyViewController: UIViewController {
         }
     }
     
-    // MARK: - Check Button Action
+    // MARK: - Cell Tapped
+    func logoutCellTapped() {
+        // 로그아웃
+    }
+    
+    func membershipWithdrawalCellTapped() {
+        // 회원탈퇴
+    }
+    
+    func couponBoxCellTapped() {
+        let couponVC = CouponBoxViewController()
+        navigationController?.pushViewController(couponVC, animated: true)
+    }
+    
+    func meCellTapped() {
+        let meVC = MEViewController()
+        navigationController?.pushViewController(meVC, animated: true)
+    }
+    
+    // MARK: - Button Action
     @objc func checkButtonTapped() {
         dismiss(animated: true)
     }
+
 }
 
 // MARK: - MyViewController Extension
@@ -93,11 +113,15 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            print("Value: \(memberItems[indexPath.row])")
+            if memberItems[indexPath.row] == "로그아웃" {
+                logoutCellTapped()
+            } else if memberItems[indexPath.row] == "탈퇴하기" {
+                membershipWithdrawalCellTapped()
+            }
         } else if indexPath.section == 1 {
-            print("Value: \(couponBoxItem[indexPath.row])")
+            couponBoxCellTapped()
         } else if indexPath.section == 2 {
-            print("Value: \(MEIntroductionItem[indexPath.row])")
+            meCellTapped()
         } else {
             return
         }

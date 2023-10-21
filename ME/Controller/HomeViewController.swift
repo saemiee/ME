@@ -62,7 +62,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         setup()
         addView()
         setLayout()
@@ -79,7 +79,7 @@ final class HomeViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = customBarButtonItem
     }
-    
+
     // MARK: - Add View
     private func addView() {
         [exerciseCard1, exerciseCard2, exerciseCard3, exerciseCard4].forEach { self.exerciseCardView.addSubview($0)}
@@ -166,9 +166,10 @@ final class HomeViewController: UIViewController {
     
     // MARK: - MyButton Action
     @objc func myTapped() {
-        let myVC = MyViewController()
+        let myVC = UINavigationController(rootViewController: MyViewController())
+                
         myVC.modalPresentationStyle = .automatic
-        present(myVC, animated: true)
+        self.present(myVC, animated: true)
     }
     
     // MARK: - MoreButton Action
