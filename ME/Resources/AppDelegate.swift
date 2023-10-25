@@ -5,8 +5,8 @@
 //  Created by 새미 on 2023/08/08.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

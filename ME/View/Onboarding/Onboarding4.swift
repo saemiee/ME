@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -65,7 +66,7 @@ final class Onboarding4: UIView {
             $0.top.equalTo(mainLabel.snp.bottom).offset(23)
             $0.leading.equalToSuperview().inset(27)
         }
-
+        
         starbucksImage.snp.makeConstraints {
             $0.top.equalTo(explanationLabel.snp.bottom).offset(167)
             $0.leading.trailing.equalToSuperview().inset(69)
@@ -73,6 +74,4 @@ final class Onboarding4: UIView {
             
         }
     }
-
-
 }

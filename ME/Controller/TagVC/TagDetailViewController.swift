@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class TagDetailViewController: UIViewController {
 
@@ -41,5 +40,4 @@ final class TagDetailViewController: UIViewController {
     @objc func chekButtonTapped() {
         dismiss(animated: true)
     }
-    
 }

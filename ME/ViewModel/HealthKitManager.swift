@@ -5,8 +5,8 @@
 //  Created by 새미 on 2023/09/17.
 //
 
-import UIKit
 import HealthKit
+import UIKit
 
 final class HealthKitManager {
     
@@ -51,7 +51,6 @@ final class HealthKitManager {
                     let caloriesBurned = sum.doubleValue(for: HKUnit.kilocalorie())
                 }
             }
-            
             healthStore.execute(query)
         }
     }
@@ -69,5 +68,4 @@ final class HealthKitManager {
             }
         }
     }
-    
 }
