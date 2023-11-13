@@ -18,4 +18,23 @@ final class CoreDataManager {
     lazy var context = appDelegate?.persistentContainer.viewContext
     
     let modelName: String = "Me"
+    
+    // MARK: - Read
+    func getUserDataFromCoreData() -> [User] {
+        var user: [User] = []
+        
+        if let context = context {
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
+            
+            do {
+                if let fetchedUser = try context.fetch(request) as? [User] {
+                    user = fetchedUser
+                }
+            } catch {
+                print("실패")
+            }
+        }
+        return user
+    }
+    
 }
