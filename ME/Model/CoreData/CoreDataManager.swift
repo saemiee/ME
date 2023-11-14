@@ -55,6 +55,27 @@ final class CoreDataManager {
         saveContext()
     }
     
+    // MARK: - Reset Kcal
+    func resetKcal(forUserWithName name: String) {
+        guard let context = context else { return }
+        
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        request.predicate = NSPredicate(format: "name == %@", name)
+        
+        do {
+            let users = try context.fetch(request)
+            if let user = users.first {
+                user.kcal = 0
+                saveContext()
+                print("\(user.name ?? "")'s kcal value deleted.")
+            } else {
+                print("User not found with name: \(name)")
+            }
+        } catch {
+            print("\(error.localizedDescription)")
+        }
+    }
+    
     // MARK: - Core Data Context Save
     private func saveContext() {
         guard let context = context else { return }
