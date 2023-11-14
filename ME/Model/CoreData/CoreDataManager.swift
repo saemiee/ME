@@ -19,22 +19,28 @@ final class CoreDataManager {
     
     let modelName: String = "Me"
     
-    // MARK: - Read
-    func getUserDataFromCoreData() -> [User] {
-        var user: [User] = []
+    // MARK: - Create User
+    func createUser(name: String, kcal: Int64, point: Int64, mainExercsie: String?) {
+        guard let context = context else { return }
         
-        if let context = context {
-            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
-            
-            do {
-                if let fetchedUser = try context.fetch(request) as? [User] {
-                    user = fetchedUser
-                }
-            } catch {
-                print("실패")
-            }
-        }
-        return user
+        let user = User(context: context)
+        user.name = name
+        user.kcal = kcal
+        user.point = point
+        user.mainExercise = mainExercsie
+        
+        saveContext()
     }
     
+    // MARK: - Core Data Context Save
+    private func saveContext() {
+        guard let context = context else { return }
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error")
+        }
+    }
+
 }
