@@ -46,7 +46,15 @@ final class CoreDataManager {
             return []
         }
     }
-
+    
+    // MARK: - Delete User
+    func deleteUser(user: User) {
+        guard let context = context else { return }
+        
+        context.delete(user)
+        saveContext()
+    }
+    
     // MARK: - Core Data Context Save
     private func saveContext() {
         guard let context = context else { return }
