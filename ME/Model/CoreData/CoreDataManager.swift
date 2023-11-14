@@ -32,6 +32,21 @@ final class CoreDataManager {
         saveContext()
     }
     
+    // MARK: - Fetch Users
+    func fetchUsers() -> [User] {
+        guard let context = context else { return [] }
+        
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        
+        do {
+            let users = try context.fetch(request)
+            return users
+        } catch {
+            print("Error fetching users: \(error.localizedDescription)")
+            return []
+        }
+    }
+
     // MARK: - Core Data Context Save
     private func saveContext() {
         guard let context = context else { return }
