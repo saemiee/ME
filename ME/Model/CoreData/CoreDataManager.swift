@@ -76,10 +76,29 @@ final class CoreDataManager {
         }
     }
     
-    // MARK: - Point 적립
-    
-    
-    // MARK: - Point 차감
+    // MARK: - Deduct Point
+    func deductPoints(forUserWithName name: String, amount: Int64) {
+        guard let context = context else { return }
+        
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        request.predicate = NSPredicate(format: "name == $@", name)
+        
+        do {
+            let users = try context.fetch(request)
+            if let user = users.first {
+                if user.point >= amount {
+                    user.point -= amount
+                    saveContext()
+                } else {
+                    print("lack of points")
+                }
+            } else {
+                print("User not found with name: \(name)")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 
     // MARK: - Core Data Context Save
     private func saveContext() {
