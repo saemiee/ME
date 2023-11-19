@@ -20,4 +20,10 @@ extension User {
     @NSManaged public var mainExercise: String?
 }
 
-extension User : Identifiable { }
+extension User : Identifiable {
+    func calculatePoints() {
+        let pointsToAdd = kcal * 10
+        
+        point += pointsToAdd
+    }
+}

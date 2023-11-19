@@ -76,6 +76,11 @@ final class CoreDataManager {
         }
     }
     
+    // MARK: - Point 적립
+    
+    
+    // MARK: - Point 차감
+
     // MARK: - Core Data Context Save
     private func saveContext() {
         guard let context = context else { return }
