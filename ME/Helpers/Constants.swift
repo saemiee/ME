@@ -33,5 +33,3 @@ public enum tagCell {
     static let cellHeight: CGFloat = 99
     static let cellColumns: CGFloat = 3
 }
-
-

@@ -6,10 +6,12 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
 final class TagCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Properties
     let tagImage = UIImageView()
     
@@ -39,7 +41,8 @@ final class TagCollectionViewCell: UICollectionViewCell {
     private func setLayout() {
         tagImage.snp.makeConstraints {
             $0.top.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview()        }
+            $0.leading.trailing.equalToSuperview()
+        }
         
         tagLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()

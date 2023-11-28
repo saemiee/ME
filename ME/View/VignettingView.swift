@@ -5,12 +5,13 @@
 //  Created by 새미 on 2023/09/20.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
+
 import SnapKit
 
 struct ContentView: View {
-        
+    
     var body: some View {
         Rectangle()
             .padding()

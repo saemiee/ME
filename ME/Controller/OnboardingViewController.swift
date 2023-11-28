@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -73,7 +74,6 @@ final class OnboardingViewController: UIViewController {
             scrollView.addSubview(view)
         }
     }
-    
 }
 
 // MARK: - UIScrollViewDelegate Extension

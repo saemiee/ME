@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -64,7 +65,6 @@ final class ExerciseCard: UIView {
         }
     }
     
-    
     // MARK: - Add View
     private func addView() {
         [exerciseLabel, kcalLabel].forEach { self.stackView.addArrangedSubview($0) }
@@ -91,5 +91,4 @@ final class ExerciseCard: UIView {
             $0.centerY.equalToSuperview()
         }
     }
-    
 }

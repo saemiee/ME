@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -71,7 +72,6 @@ final class ShopViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
-    
 }
 
 // MARK: - ShopViewController Exension
@@ -108,7 +108,6 @@ extension ShopViewController: UICollectionViewDelegateFlowLayout {
         let size = CGSize(width: width, height: height)
         return size
     }
-
 }
 
 extension ShopViewController: UICollectionViewDelegate {
