@@ -12,18 +12,21 @@ final class HealthKitManager {
     
     let healthStore = HKHealthStore()
     
+    let workoutTypes: [HKWorkoutActivityType] = [
+        .walking, .swimming, .cycling, .pilates, .running, .elliptical, .coreTraining, .stepTraining, .socialDance, .functionalStrengthTraining, .hiking, .highIntensityIntervalTraining, .rowing
+    ]
+    
     // MARK: - Authority Request
-    func requestAuthorization() {
-        let typesToRead: Set<HKSampleType> =
-        [HKObjectType.workoutType()]
+    func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
+        guard HKHealthStore.isHealthDataAvailable() else {
+            completion(false,nil)
+            return
+        }
         
-        healthStore.requestAuthorization(toShare: nil, read: typesToRead) { sucess, error in
-            if sucess {
-                self.requestAuthorization()
-            } else {
-                print("error")
-            }
+        let typesToRead: Set<HKObjectType> = [HKObjectType.workoutType()]
+        
+        healthStore.requestAuthorization(toShare: nil, read: typesToRead) { success, error in
+            completion(success, error)
         }
     }
-        
 }
