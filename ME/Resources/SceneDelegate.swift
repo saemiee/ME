@@ -12,15 +12,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-
-        let mainViewController = ViewController()
-                
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-        navigationController.navigationBar.isHidden = true
-        window?.rootViewController = navigationController
+        guard let windonScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(windowScene: windonScene)
+        
+        let rootVC = TabBarViewController()
+        let navVC = UINavigationController(rootViewController: rootVC)
+        
+        navVC.navigationBar.isHidden = true
+        navVC.navigationBar.tintColor = .yellow
+        
+        self.window?.rootViewController = navVC
         window?.makeKeyAndVisible()
+        window?.backgroundColor = .background
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
@@ -34,6 +38,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
 }
 
