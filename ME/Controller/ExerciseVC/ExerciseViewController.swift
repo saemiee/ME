@@ -27,7 +27,7 @@ final class ExerciseViewController: UIViewController {
         $0.contentInset = .zero
         $0.backgroundColor = .clear
         $0.clipsToBounds = true
-        $0.backgroundColor = .background
+        $0.backgroundColor = .clear
     }
     
     var exerciseList: [Exercise] = []
@@ -128,9 +128,11 @@ extension ExerciseViewController: UICollectionViewDataSource {
 
 // MARK: - UICollextionView Extension
 extension ExerciseViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      return CGSize(width: exerciseCell.cellWidth, height: exerciseCell.cellHeith)
-  }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = UIScreen.main.bounds.width
+        let cellWidth = screenWidth - 46
+        return CGSize(width: cellWidth, height: exerciseCell.cellHeith)
+    }
 }
 
 
