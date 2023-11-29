@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 
 final class BuyFailedViewController: UIViewController {
@@ -44,7 +45,6 @@ final class BuyFailedViewController: UIViewController {
     @objc func actionDismiss() {
         dismiss(animated: false)
     }
-    
 }
 
     

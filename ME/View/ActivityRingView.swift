@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class ActivityRingView: UIView {
     
@@ -24,5 +23,4 @@ final class ActivityRingView: UIView {
         UIColor.gray.set()
         circle.fill()
     }
-    
 }

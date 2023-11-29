@@ -6,9 +6,7 @@
 //
 //
 
-import Foundation
 import CoreData
-
 
 extension User {
 
@@ -20,9 +18,6 @@ extension User {
     @NSManaged public var kcal: Int64
     @NSManaged public var point: Int64
     @NSManaged public var mainExercise: String?
-
 }
 
-extension User : Identifiable {
-
-}
+extension User : Identifiable { }

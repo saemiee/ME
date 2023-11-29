@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Then
 
 final class MyButton: UIButton {
     
