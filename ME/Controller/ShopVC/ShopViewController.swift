@@ -21,6 +21,8 @@ final class ShopViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
     
+    private let sectionInsets = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 22)
+    
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init()).then {
         $0.isScrollEnabled = true
         $0.showsHorizontalScrollIndicator = false
@@ -53,7 +55,7 @@ final class ShopViewController: UIViewController {
     func setDatas() {
         shopDataManager.makeShopData()
     }
-    
+
     // MARK: - Add View
     private func addView() {
         [mainLabel, collectionView].forEach { view.addSubview($0) }
@@ -67,9 +69,9 @@ final class ShopViewController: UIViewController {
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(self.mainLabel.snp.bottom).offset(16)
+            $0.top.equalTo(self.mainLabel.snp.bottom).offset(18)
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.leading.trailing.equalToSuperview()
         }
     }
 }
@@ -102,11 +104,17 @@ extension ShopViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = shopCell.cellWidth
-        let height = shopCell.cellHeight
+        let width = collectionView.frame.width
+        let itemsPerRow: CGFloat = 2
+        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        let cellHeight = shopCell.cellHeight
         
-        let size = CGSize(width: width, height: height)
-        return size
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
     }
 }
 

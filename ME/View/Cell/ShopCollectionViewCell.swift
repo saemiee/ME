@@ -13,8 +13,10 @@ import Then
 final class ShopCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
+    var cellHeight: CGFloat = 0
+    
     let background = VignettingView()
-
+    
     let productImage = UIImageView()
     
     let brandNameLabel = UILabel().then {
@@ -54,23 +56,22 @@ final class ShopCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     func setLayout() {
         background.snp.makeConstraints {
-            $0.width.equalTo(166)
-            $0.height.equalTo(188)
+            $0.leading.trailing.equalToSuperview()
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
+            $0.height.equalTo(180)
         }
         
         productImage.snp.makeConstraints {
-            $0.top.equalTo(background.snp.top).offset(27)
-            $0.bottom.equalTo(background.snp.bottom).offset(-27)
-            $0.leading.equalTo(background.snp.leading).offset(16)
-            $0.trailing.equalTo(background.snp.trailing).offset(-16)
+            $0.top.equalTo(background.snp.top).offset(25)
+            $0.bottom.equalTo(background.snp.bottom).offset(-25)
+            $0.leading.equalTo(background.snp.leading).offset(14)
+            $0.trailing.equalTo(background.snp.trailing).offset(-14)
         }
         
         brandNameLabel.snp.makeConstraints {
             $0.top.equalTo(background.snp.bottom).offset(12)
             $0.leading.equalToSuperview()
-            $0.width.equalTo(166)
         }
         
         productLabel.snp.makeConstraints {

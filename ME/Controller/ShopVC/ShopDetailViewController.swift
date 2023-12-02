@@ -53,7 +53,7 @@ final class ShopDetailViewController: UIViewController {
 
     // MARK: - Buy Button Tapped
     @objc func buyButtonTapped() {
-        buySuccess()
+        buyFailed()
     }
     
     // MARK: - Bay seccess
