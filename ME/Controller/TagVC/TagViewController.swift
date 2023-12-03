@@ -85,7 +85,6 @@ final class TagViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(33)
         }
     }
-
 }
 
 // MARK: - TagViewController Extension

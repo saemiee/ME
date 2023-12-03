@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -73,5 +74,4 @@ final class Onboarding2: UIView {
             
         }
     }
-
 }

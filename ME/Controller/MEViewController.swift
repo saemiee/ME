@@ -14,5 +14,4 @@ final class MEViewController: UIViewController {
 
         view.backgroundColor = .background
     }
-
 }

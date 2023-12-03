@@ -8,11 +8,10 @@
 import UIKit
 
 final class CouponBoxViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .background
     }
-
 }

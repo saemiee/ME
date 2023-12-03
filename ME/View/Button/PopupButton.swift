@@ -26,7 +26,6 @@ final class PopupButton: UIButton {
         self.addBorder(positions: [.top], color: .white, width: 0.2)
     }
     
-    
     // MARK: - Button Setting
     func setButton(withTitle title: String) {
         backgroundColor = .clear

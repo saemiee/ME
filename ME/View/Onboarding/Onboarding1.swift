@@ -6,10 +6,11 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
-class Onboarding1: UIView {
+final class Onboarding1: UIView {
     
     // MARK: - Properties
     private let mainLabel = UILabel().then {

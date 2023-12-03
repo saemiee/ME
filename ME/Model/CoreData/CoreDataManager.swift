@@ -5,8 +5,8 @@
 //  Created by 새미 on 2023/09/10.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 final class CoreDataManager {
     
