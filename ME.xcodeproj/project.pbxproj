@@ -66,6 +66,8 @@
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
 		847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* HomeTagView.swift */; };
 		847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23062A98CE07000B79AB /* TabBarViewController.swift */; };
+		84E9463B2B1C525B00EBADD8 /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9463A2B1C525B00EBADD8 /* CouponCollectionViewCell.swift */; };
+		84E9463D2B1C541000EBADD8 /* CouponButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9463C2B1C541000EBADD8 /* CouponButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,8 @@
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
 		847B23042A962D6C000B79AB /* HomeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTagView.swift; sourceTree = "<group>"; };
 		847B23062A98CE07000B79AB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		84E9463A2B1C525B00EBADD8 /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
+		84E9463C2B1C541000EBADD8 /* CouponButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 				843536992AAF3BC0008EF27E /* MECustomButton.swift */,
 				843536A72AB96365008EF27E /* MyButton.swift */,
 				843536D82ABC3AAB008EF27E /* PopupButton.swift */,
+				84E9463C2B1C541000EBADD8 /* CouponButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -288,13 +293,13 @@
 				84487CC62AC1A45A00222BD0 /* ShopVC */,
 				84487CC72AC1A46E00222BD0 /* ExerciseVC */,
 				8447E5242A820A1E00EDCE22 /* ViewController.swift */,
+				84487DC42ADFD5C000222BD0 /* CouponBoxViewController.swift */,
 				8447E5D92A84ECA800EDCE22 /* OnboardingViewController.swift */,
 				8457A8482A8B72C30009150D /* HomeViewController.swift */,
 				847B23062A98CE07000B79AB /* TabBarViewController.swift */,
 				840A5B612A99E9480016BD0B /* MyViewController.swift */,
 				8432354B2AAD81B80086B90C /* BuyFailedViewController.swift */,
 				843536E12ABD6933008EF27E /* PayPopupViewController.swift */,
-				84487DC42ADFD5C000222BD0 /* CouponBoxViewController.swift */,
 				84487DC62ADFD5D000222BD0 /* MEViewController.swift */,
 				84487DC82ADFD5F900222BD0 /* LogoutViewController.swift */,
 				84487DCA2ADFD62B00222BD0 /* CancelMembershipViewController.swift */,
@@ -371,9 +376,10 @@
 		84766D822AA4524100696B8A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
 				840A5B6E2AA0A4A80016BD0B /* TagCollectionViewCell.swift */,
 				840A5B682A9B4D450016BD0B /* ShopCollectionViewCell.swift */,
+				8457A8422A8A21200009150D /* ExerciseCollectionViewCell.swift */,
+				84E9463A2B1C525B00EBADD8 /* CouponCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 				843536E22ABD6933008EF27E /* PayPopupViewController.swift in Sources */,
 				8447E54F2A822A4100EDCE22 /* Onboarding2.swift in Sources */,
 				8447E5482A821C3D00EDCE22 /* Onboarding1.swift in Sources */,
+				84E9463D2B1C541000EBADD8 /* CouponButton.swift in Sources */,
 				840A5B692A9B4D450016BD0B /* ShopCollectionViewCell.swift in Sources */,
 				840A5B6D2A9B4F200016BD0B /* ShopDataManager.swift in Sources */,
 				8432354E2AAD82100086B90C /* BuyFailedPopupView.swift in Sources */,
@@ -468,6 +475,7 @@
 				843235452AAD672A0086B90C /* CoreDataManager.swift in Sources */,
 				8432351F2AA9AC170086B90C /* TagDetailViewController.swift in Sources */,
 				843536A82AB96365008EF27E /* MyButton.swift in Sources */,
+				84E9463B2B1C525B00EBADD8 /* CouponCollectionViewCell.swift in Sources */,
 				8432352B2AA9ED250086B90C /* TagDetailView.swift in Sources */,
 				8447E5532A822CEE00EDCE22 /* Onboarding4.swift in Sources */,
 				8457A8432A8A21200009150D /* ExerciseCollectionViewCell.swift in Sources */,

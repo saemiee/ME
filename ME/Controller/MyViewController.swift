@@ -26,6 +26,7 @@ final class MyViewController: UIViewController {
     let memberItems = ["로그아웃", "탈퇴하기"]
     let couponBoxItem = ["쿠폰함"]
     let MEIntroductionItem = ["ME"]
+    
     private let titleLabel = UILabel().then {
         $0.text = "설정"
         $0.textColor = .white
@@ -50,6 +51,7 @@ final class MyViewController: UIViewController {
         setupLayout()
     }
     
+    // MARK: - Setting TableView
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
