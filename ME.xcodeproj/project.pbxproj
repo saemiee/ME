@@ -67,6 +67,7 @@
 		847B23032A909AAE000B79AB /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23022A909AAE000B79AB /* ExerciseCard.swift */; };
 		847B23052A962D6C000B79AB /* HomeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23042A962D6C000B79AB /* HomeTagView.swift */; };
 		847B23072A98CE07000B79AB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B23062A98CE07000B79AB /* TabBarViewController.swift */; };
+		849071382B2307F600896FE5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849071372B2307F600896FE5 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +132,7 @@
 		847B23022A909AAE000B79AB /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
 		847B23042A962D6C000B79AB /* HomeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTagView.swift; sourceTree = "<group>"; };
 		847B23062A98CE07000B79AB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		849071372B2307F600896FE5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				8447E5492A821E2000EDCE22 /* UILabel+Extension.swift */,
 				843536DA2ABC3C8C008EF27E /* UIVeiw+Extension.swift */,
 				843536DC2ABC5FE2008EF27E /* UIButton+Extension.swift */,
+				849071372B2307F600896FE5 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				84487CD52ACD30B100222BD0 /* User+CoreDataProperties.swift in Sources */,
 				840A5B712AA0A5650016BD0B /* Tag.swift in Sources */,
 				8447E5432A82152A00EDCE22 /* UIColor+Extension.swift in Sources */,
+				849071382B2307F600896FE5 /* UIImageView+Extension.swift in Sources */,
 				845C8D4C2AE10C4200F4D373 /* ExerciseCardView.swift in Sources */,
 				8432352D2AAC560A0086B90C /* ShopDetailViewController.swift in Sources */,
 			);
