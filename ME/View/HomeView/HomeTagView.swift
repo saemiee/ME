@@ -14,7 +14,7 @@ final class HomeTagView: UIView {
 
     // MARK: - Properties
     let tagImageView1 = UIImageView().then {
-        $0.image = UIImage(named: "welcome")
+        $0.image = UIImage(resource: .welcome)
         $0.backgroundColor = .white
     }
     
@@ -25,7 +25,7 @@ final class HomeTagView: UIView {
     }
     
     let tagImageView2 = UIImageView().then {
-        $0.image = UIImage(named: "pool")
+        $0.image = UIImage(resource: .pool)
     }
     
     let tagLabel2 = UILabel().then {
@@ -35,7 +35,7 @@ final class HomeTagView: UIView {
     }
     
     let tagImageView3 = UIImageView().then {
-        $0.image = UIImage(named: "rerb")
+        $0.image = UIImage(resource: .rerb)
     }
     
     let tagLabel3 = UILabel().then {

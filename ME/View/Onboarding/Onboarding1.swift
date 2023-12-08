@@ -32,7 +32,7 @@ final class Onboarding1: UIView {
     }
     
     private let appleWatchImage = UIImageView().then {
-        $0.image = UIImage(named: "appleWatch")
+        $0.image = UIImage(resource: .appleWatch)
     }
 
     // MARK: - init

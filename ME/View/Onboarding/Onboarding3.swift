@@ -29,7 +29,7 @@ final class Onboarding3: UIView {
     }
     
     private let dumbbellImage = UIImageView().then {
-        $0.image = UIImage(named: "dumbbell")
+        $0.image = UIImage(resource: .dumbbell)
     }
     
     // MARK: - init

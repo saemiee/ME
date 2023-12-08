@@ -16,7 +16,7 @@ final class ExerciseCard: UIView {
     let maxCharacters = 7
     
     let exerciseImage = UIImageView().then {
-        $0.image = UIImage.init( systemName: "figure.open.water.swim", withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
+        $0.image = UIImage.init(systemName: "figure.open.water.swim", withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
         $0.tintColor = .yellow
     }
     

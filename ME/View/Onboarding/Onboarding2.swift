@@ -29,7 +29,7 @@ final class Onboarding2: UIView {
     }
     
     private let pointImage = UIImageView().then {
-        $0.image = UIImage(named: "point")
+        $0.image = UIImage(resource: .point)
     }
     
     // MARK: - init

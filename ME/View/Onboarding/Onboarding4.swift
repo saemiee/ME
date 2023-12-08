@@ -29,7 +29,7 @@ final class Onboarding4: UIView {
     }
     
     private let starbucksImage = UIImageView().then {
-        $0.image = UIImage(named: "starbucks")
+        $0.image = UIImage(resource: .starbucks)
     }
     
     // MARK: - init
