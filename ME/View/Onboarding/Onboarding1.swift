@@ -31,9 +31,7 @@ final class Onboarding1: UIView {
         $0.setLineSpacing(spacing: 2)
     }
     
-    private let appleWatchImage = UIImageView().then {
-        $0.image = UIImage(resource: .appleWatch)
-    }
+    private let appleWatchImage = UIImageView(image: UIImage(resource: .appleWatch))
 
     // MARK: - init
     override init(frame: CGRect) {

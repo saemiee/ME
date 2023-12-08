@@ -28,9 +28,7 @@ final class Onboarding3: UIView {
         $0.setLineSpacing(spacing: 2)
     }
     
-    private let dumbbellImage = UIImageView().then {
-        $0.image = UIImage(resource: .dumbbell)
-    }
+    private let dumbbellImage = UIImageView(image: UIImage(resource: .dumbbell))
     
     // MARK: - init
     override init(frame: CGRect) {

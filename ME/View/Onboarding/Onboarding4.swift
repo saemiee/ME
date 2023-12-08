@@ -28,9 +28,7 @@ final class Onboarding4: UIView {
         $0.setLineSpacing(spacing: 2)
     }
     
-    private let starbucksImage = UIImageView().then {
-        $0.image = UIImage(resource: .starbucks)
-    }
+    private let starbucksImage = UIImageView(image: UIImage(resource: .starbucks))
     
     // MARK: - init
     override init(frame: CGRect) {

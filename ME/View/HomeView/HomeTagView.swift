@@ -13,10 +13,7 @@ import Then
 final class HomeTagView: UIView {
 
     // MARK: - Properties
-    let tagImageView1 = UIImageView().then {
-        $0.image = UIImage(resource: .welcome)
-        $0.backgroundColor = .white
-    }
+    let tagImageView1 = UIImageView(image: UIImage(resource: .welcome))
     
     let tagLabel1 = UILabel().then {
         $0.text = "WELCOME"
@@ -24,9 +21,7 @@ final class HomeTagView: UIView {
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
     
-    let tagImageView2 = UIImageView().then {
-        $0.image = UIImage(resource: .pool)
-    }
+    let tagImageView2 = UIImageView(image: UIImage(resource: .pool))
     
     let tagLabel2 = UILabel().then {
         $0.text = "수영왕"
@@ -34,9 +29,7 @@ final class HomeTagView: UIView {
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
     
-    let tagImageView3 = UIImageView().then {
-        $0.image = UIImage(resource: .rerb)
-    }
+    let tagImageView3 = UIImageView(image: UIImage(resource: .rerb))
     
     let tagLabel3 = UILabel().then {
         $0.text = "자연인"

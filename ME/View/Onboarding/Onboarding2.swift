@@ -28,9 +28,7 @@ final class Onboarding2: UIView {
         $0.setLineSpacing(spacing: 2)
     }
     
-    private let pointImage = UIImageView().then {
-        $0.image = UIImage(resource: .point)
-    }
+    private let pointImage = UIImageView(image: UIImage(resource: .point))
     
     // MARK: - init
     override init(frame: CGRect) {
